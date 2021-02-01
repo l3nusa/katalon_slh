@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>Staging env</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'test.slh.com'</initValue>
+      <name>baseURL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Add date+'</initValue>
+      <name>SSB_Datepicker</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>' Guests+'</initValue>
+      <name>SSB_Guests</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

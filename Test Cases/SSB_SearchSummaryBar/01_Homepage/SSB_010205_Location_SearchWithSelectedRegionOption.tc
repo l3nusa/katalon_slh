@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SSB_010205_Location_SearchWithSelectedRegionOption</name>
+   <tag>SSB</tag>
+   <comment></comment>
+   <testCaseGuid>a2f73c93-b293-4003-bb6d-d3d3ceff3b0a</testCaseGuid>
+</TestCaseEntity>

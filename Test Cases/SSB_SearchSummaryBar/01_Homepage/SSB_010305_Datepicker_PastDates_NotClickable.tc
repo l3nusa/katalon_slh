@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SSB_010305_Datepicker_PastDates_NotClickable</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ea5dd6fc-7f27-4239-b5a8-b9f729fd8501</testCaseGuid>
+</TestCaseEntity>

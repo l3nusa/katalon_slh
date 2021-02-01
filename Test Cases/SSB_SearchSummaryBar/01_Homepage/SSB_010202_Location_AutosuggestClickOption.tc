@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SSB_010202_Location_AutosuggestClickOption</name>
+   <tag>SSB</tag>
+   <comment></comment>
+   <testCaseGuid>60df4d5b-92fd-4e93-a0dc-536acc538f1b</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description>Default value</description>
+      <initValue>2</initValue>
+      <name>SSB_Guests_Amount</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>19</initValue>
+      <name>SSB_AdultsMax</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>1</initValue>
+      <name>SSB_AdultsMin</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>18</initValue>
+      <name>SSB_ChildrenMax</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>0</initValue>
+      <name>SSB_ChildrenMin</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

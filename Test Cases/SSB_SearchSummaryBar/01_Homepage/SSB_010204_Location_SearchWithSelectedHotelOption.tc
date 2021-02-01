@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SSB_010204_Location_SearchWithSelectedHotelOption</name>
+   <tag>SSB</tag>
+   <comment></comment>
+   <testCaseGuid>e8f6e156-9424-4f4b-a9d4-ffb2c61ec072</testCaseGuid>
+</TestCaseEntity>

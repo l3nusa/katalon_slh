@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SSB_010201_Location_AutosuggestShown</name>
+   <tag>SSB</tag>
+   <comment></comment>
+   <testCaseGuid>dc78f433-d002-4c6d-b4cb-b9596e728a85</testCaseGuid>
+</TestCaseEntity>

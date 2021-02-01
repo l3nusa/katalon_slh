@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Search summary bar</description>
+   <name>SSB_010101_DefaultState</name>
+   <tag>SSB</tag>
+   <comment></comment>
+   <testCaseGuid>13824cda-4bb1-4b79-a9c1-c8c69b7f2ee7</testCaseGuid>
+</TestCaseEntity>
