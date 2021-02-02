@@ -72,7 +72,7 @@ WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), checkin.form
 
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), checkout.format('dd MMMM'))
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), ((GlobalVariable.SSB_GuestsTextTextText_Amount - 1) + i) + GlobalVariable.SSB_GuestsTextTextText)
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), ((GlobalVariable.SSB_GuestsTextTextTextTextTextText_Amount - 1) + i) + GlobalVariable.SSB_GuestsTextTextTextTextTextText)
 
 WebUI.closeBrowser()
 
