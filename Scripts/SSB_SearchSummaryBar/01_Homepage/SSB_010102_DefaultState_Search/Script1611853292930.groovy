@@ -26,11 +26,6 @@ WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
 currentUrl = WebUI.getUrl()
 
-if (!(currentUrl.endsWith((('/explore-hotels?query=&startDate=&endDate=&adults=' + GlobalVariable.SSB_GuestsAmount) + '&children=') + 
-    GlobalVariable.SSB_ChildrenMin))) {
-    throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
-}
-
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl())
 CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl())
