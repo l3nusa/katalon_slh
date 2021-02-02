@@ -26,7 +26,7 @@ WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), GlobalVariab
 
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), GlobalVariable.SSB_Datepicker)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), GlobalVariable.SSB_Guests_Amount + GlobalVariable.SSB_Guests)
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_GuestsText)
 
 WebUI.closeBrowser()
 

@@ -43,17 +43,9 @@ WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests'))
 
-int i = 0
-while (i < GlobalVariable.SSB_AdultsMin){
-	WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Min'), FailureHandling.STOP_ON_FAILURE)
-	i++			
-}
+CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
 
-i = 0
-while (i < AddChild) {
-    WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Plus'), FailureHandling.STOP_ON_FAILURE)
-	i++    
-}
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(AddChild)
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
 

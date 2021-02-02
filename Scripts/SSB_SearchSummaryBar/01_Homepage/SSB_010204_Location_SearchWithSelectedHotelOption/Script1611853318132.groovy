@@ -29,7 +29,7 @@ WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
 currentUrl = WebUI.getUrl()
 
-if (!(currentUrl.endsWith('/hotels/dar-ahlam?adults=' + GlobalVariable.SSB_Guests_Amount + '&children=' + GlobalVariable.SSB_ChildrenMin))) {
+if (!(currentUrl.endsWith('/hotels/dar-ahlam?adults=' + GlobalVariable.SSB_GuestsAmount + '&children=' + GlobalVariable.SSB_ChildrenMin))) {
     throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
 }
 

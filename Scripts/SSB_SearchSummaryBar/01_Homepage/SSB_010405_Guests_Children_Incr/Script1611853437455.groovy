@@ -21,17 +21,11 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests'))
 
-int i = 0
-
-while ( i < GlobalVariable.SSB_ChildrenMax ){
-	WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Plus'), FailureHandling.STOP_ON_FAILURE)
-	i++
-	WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (GlobalVariable.SSB_Guests_Amount + i) + GlobalVariable.SSB_Guests)
-}
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(GlobalVariable.SSB_ChildrenMax)
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Plus'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), ((GlobalVariable.SSB_Guests_Amount + GlobalVariable.SSB_ChildrenMax) + GlobalVariable.SSB_Guests))
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), ((GlobalVariable.SSB_GuestsTextTextAmount + GlobalVariable.SSB_ChildrenMax) + GlobalVariable.SSB_GuestsTextTextText))
 
 WebUI.closeBrowser()
 

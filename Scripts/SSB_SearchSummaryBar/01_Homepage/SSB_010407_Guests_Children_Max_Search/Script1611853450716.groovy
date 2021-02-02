@@ -21,12 +21,7 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests'))
 
-int i = 0
-
-while (i < GlobalVariable.SSB_ChildrenMax) {
-    WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Plus'), FailureHandling.STOP_ON_FAILURE)
-	i++    
-}
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(GlobalVariable.SSB_ChildrenMax)
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
 
@@ -34,7 +29,7 @@ WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
 currentUrl = WebUI.getUrl()
 
-if (!(currentUrl.endsWith('/explore-hotels?query=&startDate=&endDate=&adults=' + GlobalVariable.SSB_Guests_Amount + '&children=' + GlobalVariable.SSB_ChildrenMax))) {
+if (!(currentUrl.endsWith('/explore-hotels?query=&startDate=&endDate=&adults=' + GlobalVariable.SSB_GuestsAmount + '&children=' + GlobalVariable.SSB_ChildrenMax))) {
     throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
 }
 
@@ -42,7 +37,7 @@ WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), GlobalVariab
 
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), GlobalVariable.SSB_Datepicker)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (GlobalVariable.SSB_Guests_Amount + GlobalVariable.SSB_ChildrenMax) + GlobalVariable.SSB_Guests)
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_ChildrenMax) + GlobalVariable.SSB_GuestsText)
 
 WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', '', 0)
 

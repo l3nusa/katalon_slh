@@ -45,7 +45,7 @@ WebUI.click(findTestObject('SearchSummaryBar/Guests'))
 
 int i = 0
 while (i < AddAdults){
-	WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Min'), FailureHandling.STOP_ON_FAILURE)
+	WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Minus'), FailureHandling.STOP_ON_FAILURE)
 	i++			
 }
 
@@ -72,7 +72,7 @@ WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), checkin.form
 
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), checkout.format('dd MMMM'))
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), ((GlobalVariable.SSB_Guests_Amount - 1) + i) + GlobalVariable.SSB_Guests)
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), ((GlobalVariable.SSB_GuestsTextTextText_Amount - 1) + i) + GlobalVariable.SSB_GuestsTextTextText)
 
 WebUI.closeBrowser()
 

@@ -34,7 +34,7 @@ WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
 currentUrl = WebUI.getUrl()
 
-if (!(currentUrl.endsWith(('/explore-hotels?query=&startDate=' + selectedDate.format('dd+MMM+yyyy')) + '&endDate=&adults=' + GlobalVariable.SSB_Guests_Amount +
+if (!(currentUrl.endsWith(('/explore-hotels?query=&startDate=' + selectedDate.format('dd+MMM+yyyy')) + '&endDate=&adults=' + GlobalVariable.SSB_GuestsTextTextText_Amount +
 	'&children=' + GlobalVariable.SSB_ChildrenMin))) {
     throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
 }
@@ -43,7 +43,7 @@ WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), selectedDate
 
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), GlobalVariable.SSB_Datepicker)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), GlobalVariable.SSB_Guests_Amount + GlobalVariable.SSB_Guests)
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), GlobalVariable.SSB_GuestsTextTextText_Amount + GlobalVariable.SSB_GuestsTextTextText)
 
 WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', '', 0)
 

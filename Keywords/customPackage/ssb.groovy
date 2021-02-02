@@ -19,12 +19,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
-
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords
 import java.text.SimpleDateFormat as SimpleDateFormat
 import java.time.format.DateTimeFormatter as DateTimeFormatter
 import java.util.Date as Date
@@ -54,5 +49,70 @@ public class ssb {
 		def day = sdf.format(date).toString()
 		String xpath = '//table[@role=\'presentation\']//td[contains(@aria-label,\'' + day + '\')]'
 		return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
+	}
+
+	@Keyword
+	def setAdultsAmount(int expAdultsAmount){
+		int curAdultsAmount = Integer.parseInt(WebUI.getText(findTestObject('SearchSummaryBar/Guests_Adults_Amount')))
+
+		int i = 0
+		if ((expAdultsAmount < curAdultsAmount) && (expAdultsAmount >= GlobalVariable.SSB_AdultsMin)) {
+			while (i < curAdultsAmount - expAdultsAmount) {
+				WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Minus'), FailureHandling.STOP_ON_FAILURE)
+				i++
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount - 1) + GlobalVariable.SSB_GuestsTextTextText)
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_Adults_Amount'), (curAdultsAmount - i).toString())
+			}
+			return curAdultsAmount - i
+		}
+		else {
+			while (i < expAdultsAmount - curAdultsAmount) {
+				WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Plus'), FailureHandling.STOP_ON_FAILURE)
+				i++
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_Adults_Amount'), (curAdultsAmount + i).toString())
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount + i) + GlobalVariable.SSB_GuestsTextTextText)
+			}
+			return curAdultsAmount + i
+		}
+
+		if ((expAdultsAmount < GlobalVariable.SSB_AdultsMin) || (expAdultsAmount > GlobalVariable.SSB_AdultsMax)){
+			throw new Exception('Please check expected Adults value!')
+		}
+	}
+
+	@Keyword
+	def setChildrenAmount(int expChildrenAmount, int guestsAmount = GlobalVariable.SSB_GuestsTextTextAmount){
+		int curChildrenAmount = Integer.parseInt(WebUI.getText(findTestObject('SearchSummaryBar/Guests_Children_Amount')))
+
+		int i = 0
+		if ((expChildrenAmount < curChildrenAmount) && (expChildrenAmount >= GlobalVariable.SSB_ChildrenMin)){
+			while (i < curChildrenAmount - expChildrenAmount) {
+				WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Minus'), FailureHandling.STOP_ON_FAILURE)
+				i++
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_Children_Amount'), (curChildrenAmount - i).toString())
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curChildrenAmount - i + guestsAmount) + GlobalVariable.SSB_GuestsTextTextText)
+			}
+			return curChildrenAmount - i
+		}
+		else {
+			while (i < expChildrenAmount - curChildrenAmount) {
+				WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Plus'), FailureHandling.STOP_ON_FAILURE)
+				i++
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_Children_Amount'), (curChildrenAmount + i).toString())
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curChildrenAmount + i + guestsAmount) + GlobalVariable.SSB_GuestsTextTextText)
+			}
+			return curChildrenAmount + i
+		}
+
+		if ((expChildrenAmount < GlobalVariable.SSB_ChildrenMin) || (expChildrenAmount > GlobalVariable.SSB_ChildrenMax)){
+			throw new Exception('Please check expected Children value!')
+		}
+	}
+	
+	@Keyword
+	def verifyAppendedGuestsAmount(String url, int adults, int children){
+		if (!(url.contains('adults=' + adults)) || (url.contains('children=' + children))) {
+			throw new Exception('[Adults] or [Children] value in current URL doesn\'t match the expected! ', url)
+		}
 	}
 }

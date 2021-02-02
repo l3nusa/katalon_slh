@@ -46,7 +46,7 @@ WebUI.click(findTestObject('SearchSummaryBar/Guests'))
 int i = 1
 
 while (i >= 1) {
-    WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Min'), FailureHandling.STOP_ON_FAILURE)
+    WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Minus'), FailureHandling.STOP_ON_FAILURE)
 
     i--
 }

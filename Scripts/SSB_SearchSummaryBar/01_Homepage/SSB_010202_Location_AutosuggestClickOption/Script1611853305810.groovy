@@ -21,7 +21,7 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
 
-WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'pet')
+WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'petit')
 
 WebUI.verifyElementVisible(findTestObject('SearchSummaryBar/AutosuggestOptions'))
 
