@@ -17,6 +17,6 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>' Guests'</initValue>
-      <name>SSB_Guests</name>
+      <name>SSB_GuestsText</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

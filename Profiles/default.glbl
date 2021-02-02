@@ -7,7 +7,7 @@
    <GlobalVariableEntity>
       <description>Default value</description>
       <initValue>2</initValue>
-      <name>SSB_Guests_Amount</name>
+      <name>SSB_GuestsAmount</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
