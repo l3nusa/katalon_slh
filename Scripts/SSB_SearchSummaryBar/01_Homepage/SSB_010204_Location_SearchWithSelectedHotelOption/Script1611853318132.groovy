@@ -27,11 +27,10 @@ WebUI.click(findTestObject('SearchSummaryBar/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
-currentUrl = WebUI.getUrl()
-
-if (!(currentUrl.endsWith('/hotels/dar-ahlam?adults=' + GlobalVariable.SSB_GuestsAmount + '&children=' + GlobalVariable.SSB_ChildrenMin))) {
-    throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
-}
+CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/hotels/dar-ahlam')
+//CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'london')
+CustomKeywords.'customPackage.ssb.verifyAppendedBookingDates'(WebUI.getUrl(), null, null)
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 
 WebUI.closeBrowser()
 

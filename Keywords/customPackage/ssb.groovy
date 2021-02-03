@@ -60,7 +60,7 @@ public class ssb {
 			while (i < curAdultsAmount - expAdultsAmount) {
 				WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Minus'), FailureHandling.STOP_ON_FAILURE)
 				i++
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount - 1) + GlobalVariable.SSB_GuestsTextTextTextTextTextText)
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount - 1) + GlobalVariable.SSB_GuestsText)
 				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_Adults_Amount'), (curAdultsAmount - i).toString())
 			}
 			return curAdultsAmount - i
@@ -70,7 +70,7 @@ public class ssb {
 				WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Plus'), FailureHandling.STOP_ON_FAILURE)
 				i++
 				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_Adults_Amount'), (curAdultsAmount + i).toString())
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount + i) + GlobalVariable.SSB_GuestsTextTextTextTextTextText)
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount + i) + GlobalVariable.SSB_GuestsText)
 			}
 			return curAdultsAmount + i
 		}
@@ -81,7 +81,7 @@ public class ssb {
 	}
 
 	@Keyword
-	def setChildrenAmount(int expChildrenAmount, int guestsAmount = GlobalVariable.SSB_GuestsTextTextTextTextTextAmount){
+	def setChildrenAmount(int expChildrenAmount, int guestsAmount = GlobalVariable.SSB_GuestsAmount){
 		int curChildrenAmount = Integer.parseInt(WebUI.getText(findTestObject('SearchSummaryBar/Guests_Children_Amount')))
 
 		int i = 0
@@ -90,7 +90,7 @@ public class ssb {
 				WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Minus'), FailureHandling.STOP_ON_FAILURE)
 				i++
 				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_Children_Amount'), (curChildrenAmount - i).toString())
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curChildrenAmount - i + guestsAmount) + GlobalVariable.SSB_GuestsTextTextTextTextTextText)
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curChildrenAmount - i + guestsAmount) + GlobalVariable.SSB_GuestsText)
 			}
 			return curChildrenAmount - i
 		}
@@ -99,7 +99,7 @@ public class ssb {
 				WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Plus'), FailureHandling.STOP_ON_FAILURE)
 				i++
 				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_Children_Amount'), (curChildrenAmount + i).toString())
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curChildrenAmount + i + guestsAmount) + GlobalVariable.SSB_GuestsTextTextTextTextTextText)
+				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curChildrenAmount + i + guestsAmount) + GlobalVariable.SSB_GuestsText)
 			}
 			return curChildrenAmount + i
 		}
@@ -115,31 +115,61 @@ public class ssb {
 			throw new Exception('[Adults] or [Children] value in current URL doesn\'t match the expected! ', currentUrl)
 		}
 	}
-	
+
 	@Keyword
-	def verifyAppendedDates(String currentUrl, Date checkin=null, Date checkout=null){	
+	def verifyAppendedDates(String currentUrl, String checkin=null, String checkout=null){
 		String checkinStr = 'startDate='
 		String checkoutStr = 'endDate='
-		
+
 		if (checkin){
-			checkinStr = checkinStr + checkin.format('yyyy+MM+dd')
+			checkinStr = checkinStr + checkin
 		}
 		if (checkout){
-			checkoutStr = checkoutStr + checkout.format('yyyy+MM+dd')
+			checkoutStr = checkoutStr + checkout
 		}
-			
+
 		if (!currentUrl.contains(checkinStr) || !currentUrl.contains(checkoutStr)) {
 			throw new Exception('[checkin] or [checkout] value in current URL doesn\'t match the expected! ', currentUrl)
 		}
 	}
 	
 	@Keyword
-	def verifyAppendedQuery(String currentUrl, String query=""){
+	def verifyAppendedBookingDates(String currentUrl, Date checkin, Date checkout ){
+		String checkinStr = 'startDate='
+		String checkoutStr = 'endDate='
+
+		if (!(checkin && checkout)) {
+			if (currentUrl.contains(checkinStr) || currentUrl.contains(checkoutStr)) {
+				throw new Exception('[checkin] or [checkout] value is present in current URL! ', currentUrl)
+			}
+		}		
+	}
+
+	@Keyword
+	def verifyAppendedQuery(String currentUrl, String query="", String city=null, String country=null, String regions=null){
 		if (!currentUrl.contains('query=' + query)) {
 			throw new Exception('[query] value in current URL doesn\'t match the expected! ', currentUrl)
 		}
+		
+		if (city) {
+			if (!currentUrl.contains('city=' + city)) {
+				throw new Exception('[city] value in current URL doesn\'t match the expected! ', currentUrl)
+			}
+		}
+		
+		if (country) {
+			if (!currentUrl.contains('country=' + country)) {
+				throw new Exception('[country] value in current URL doesn\'t match the expected! ', currentUrl)
+			}
+		}
+		
+		if (regions) {
+			if (!currentUrl.contains('regions=' + regions)) {
+				throw new Exception('[regions] value in current URL doesn\'t match the expected! ', currentUrl)
+			}
+		}
 	}
-	
+
 	@Keyword
 	def verifyDestinationPageUrl(String currentUrl, String expUrl){
 		if (!currentUrl.contains(expUrl)) {

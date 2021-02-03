@@ -24,8 +24,6 @@ WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), '
 
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
-currentUrl = WebUI.getUrl()
-
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl())
 CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl())

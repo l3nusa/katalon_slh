@@ -32,18 +32,16 @@ WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
-currentUrl = WebUI.getUrl()
-
-if (!(currentUrl.endsWith(('/explore-hotels?query=&startDate=' + selectedDate.format('dd+MMM+yyyy')) + '&endDate=&adults=' + GlobalVariable.SSB_GuestsTextTextTextTextTextText_Amount +
-	'&children=' + GlobalVariable.SSB_ChildrenMin))) {
-    throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
-}
+CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
+CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl())
+CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), selectedDate.format('dd+MMM+yyyy'))
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), selectedDate.format('d MMMM'))
 
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), GlobalVariable.SSB_Datepicker)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), GlobalVariable.SSB_GuestsTextTextTextTextTextText_Amount + GlobalVariable.SSB_GuestsTextTextTextTextTextText)
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_GuestsText)
 
 WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', '', 0)
 

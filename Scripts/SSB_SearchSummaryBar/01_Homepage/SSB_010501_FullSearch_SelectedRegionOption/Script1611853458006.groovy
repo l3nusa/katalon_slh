@@ -49,12 +49,10 @@ WebUI.click(findTestObject('SearchSummaryBar/Location'))
 
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
-currentUrl = WebUI.getUrl()
-
-if (!(currentUrl.endsWith(((('/explore-hotels?query=alex&startDate=' + checkin.format('dd+MMM+yyyy')) + '&endDate=') + checkout.format('dd+MMM+yyyy')) + 
-	'&adults=' + GlobalVariable.SSB_AdultsMin + '&children=' + AddChild))) {
-    throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
-}
+CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
+CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(),'alex')
+CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(),checkin.format('dd+MMM+yyyy'),checkout.format('dd+MMM+yyyy'))
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, AddChild)
 
 WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'alex', 0)
 

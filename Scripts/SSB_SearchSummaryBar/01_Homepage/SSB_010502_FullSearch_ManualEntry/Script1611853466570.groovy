@@ -44,20 +44,18 @@ WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests'))
 
-CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
+int guestsAmount = CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
 
-CustomKeywords.'customPackage.ssb.setChildrenAmount'(AddChild)
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(AddChild, guestsAmount)
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
 
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
-currentUrl = WebUI.getUrl()
-
-if (!(currentUrl.endsWith(((('/explore-hotels?query=Barcelona%2C+Spain&city=Barcelona&country=Spain&regions=Barcelona&startDate=' + 
-    checkin.format('dd+MMM+yyyy')) + '&endDate=') + checkout.format('dd+MMM+yyyy')) + '&adults=' + GlobalVariable.SSB_AdultsMin + '&children=' + AddChild))) {
-    throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
-}
+CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
+CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(),'Barcelona%2C+Spain','Barcelona','Spain','Barcelona')
+CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(),checkin.format('dd+MMM+yyyy'),checkout.format('dd+MMM+yyyy'))
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, AddChild)
 
 WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'Barcelona, Spain', 0)
 
@@ -65,7 +63,7 @@ WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), checkin.form
 
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), checkout.format('d MMMM'))
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (GlobalVariable.SSB_AdultsMin + AddChild) + GlobalVariable.SSB_GuestsTextTextTextText)
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (GlobalVariable.SSB_AdultsMin + AddChild) + GlobalVariable.SSB_GuestsText)
 
 WebUI.closeBrowser()
 

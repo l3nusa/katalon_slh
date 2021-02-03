@@ -43,20 +43,18 @@ WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests'))
 
-CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
+int guestsAmount = CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
 
-CustomKeywords.'customPackage.ssb.setChildrenAmount'(AddChild)
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(AddChild, guestsAmount)
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
 
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
-currentUrl = WebUI.getUrl()
-
-if (!(currentUrl.endsWith('hotels/dar-ahlam?adults=' + GlobalVariable.SSB_AdultsMin + '&children=' + AddChild + 
-	'&startDate=' + checkin.format('yyyy-MM-dd') + '&endDate=' + checkout.format('yyyy-MM-dd')))) {
-    throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
-}
+CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/hotels/dar-ahlam')
+//CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(),'Barcelona%2C+Spain','Barcelona','Spain','Barcelona')
+CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, AddChild)
 
 WebUI.closeBrowser()
 

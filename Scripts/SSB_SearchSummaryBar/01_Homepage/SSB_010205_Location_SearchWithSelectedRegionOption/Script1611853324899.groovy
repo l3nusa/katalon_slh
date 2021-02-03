@@ -27,15 +27,12 @@ WebUI.click(findTestObject('SearchSummaryBar/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
-currentUrl = WebUI.getUrl()
+CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
+CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'Petit+St.+Vincent+Island%2C+Saint+Vincent+and+the+Grenadines','Petit+St.+Vincent+Island','Saint+Vincent+and+the+Grenadines')
+CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), null, null)
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 
-if (!(currentUrl.endsWith((('/explore-hotels?query=Petit+St.+Vincent+Island%2C+Saint+Vincent+and+the+Grenadines&city=Petit+St.+Vincent+Island&country=Saint+Vincent+and+the+Grenadines&startDate=&endDate=&adults=' + 
-    GlobalVariable.SSB_GuestsAmount) + '&children=') + GlobalVariable.SSB_ChildrenMin))) {
-    throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
-}
-
-WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'Petit St. Vincent Island, Saint Vincent and the Grenadines', 
-    0)
+WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'Petit St. Vincent Island, Saint Vincent and the Grenadines', 0)
 
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), GlobalVariable.SSB_Datepicker)
 

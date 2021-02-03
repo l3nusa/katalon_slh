@@ -25,7 +25,7 @@ CustomKeywords.'customPackage.ssb.setChildrenAmount'(GlobalVariable.SSB_Children
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Plus'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), ((GlobalVariable.SSB_GuestsTextTextTextTextTextAmount + GlobalVariable.SSB_ChildrenMax) + GlobalVariable.SSB_GuestsTextTextTextTextTextText))
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), ((GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_ChildrenMax) + GlobalVariable.SSB_GuestsText))
 
 WebUI.closeBrowser()
 
