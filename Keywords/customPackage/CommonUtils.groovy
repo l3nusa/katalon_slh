@@ -22,5 +22,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public class sharedMethods {
+import org.openqa.selenium.Keys as Keys
+
+
+public class CommonUtils {
+	@Keyword
+	def static clearElementText(TestObject element) {
+		//WebUI.executeJavaScript("arguments[0].value=''", Arrays.asList(element))
+		WebUI.click(element)
+		WebUI.sendKeys(element, Keys.chord(Keys.CONTROL, "a"))
+		WebUI.sendKeys(element, Keys.chord(Keys.DELETE/*.BACK_SPACE*/))
+	}
 }

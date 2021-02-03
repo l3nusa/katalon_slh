@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Guests_Adults_Amount</name>
+   <name>Guests_ChildrenAmount</name>
    <tag></tag>
-   <elementGuidId>8c4efbd9-eaf7-4ec5-a70d-d23a405a63f3</elementGuidId>
+   <elementGuidId>609229ac-6a1c-492f-8a6c-35b4b1256115</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//div[starts-with(@class,'apps-search-bar-form')]//div[@class='ui-guests-popup-counter'])[1]</value>
+         <value>(//div[starts-with(@class,'apps-search-bar-form')]//div[@class='ui-guests-popup-counter'])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>Guests</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
+   <testSuiteGuid>cab044ce-ac4e-435a-814f-3bad5cb5d090</testSuiteGuid>
+   <testCaseLink>
+      <guid>25e83b16-cb04-440b-8ae8-d4b81b1d0219</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010501_FullSearch_SelectedRegionOption</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>8948e2d3-af5a-4e67-a480-97c4f2e9eef6</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>daf4552a-a9e2-494f-a7db-66a91cc97dd0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010502_FullSearch_ManualEntry</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c69031f8-650e-4e03-b4bb-347c37a5e40c</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ade32dc6-1c95-4faf-b726-93c6a63013b3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010503_FullSearch_SelectedHotelOption</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>452b1478-3dce-4715-a0ed-0c970877cde0</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

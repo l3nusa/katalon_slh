@@ -26,11 +26,11 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
 
-Date checkinDate = CustomKeywords.'customPackage.ssb.getCheckinDate'()
+Date checkinDate = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
 
 WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 
-Date checkoutDate = CustomKeywords.'customPackage.ssb.getCheckoutDate'()
+Date checkoutDate = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
 
 WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 

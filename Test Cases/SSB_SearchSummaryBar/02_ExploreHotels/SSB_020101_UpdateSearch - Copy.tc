@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>SSB_020101_UpdateSearch</name>
+   <name>SSB_020101_UpdateSearch - Copy</name>
    <tag>SSB</tag>
    <comment></comment>
-   <testCaseGuid>d1c3ee2f-777b-4140-8a78-ec9e1bf86122</testCaseGuid>
+   <testCaseGuid>ab1e0b11-8ec2-4f85-ab4b-a54353a90969</testCaseGuid>
    <variable>
       <defaultValue>3</defaultValue>
       <description></description>
-      <id>c8d585c4-86a7-4c1c-b832-a6b44e13b1c3</id>
+      <id>d571f5e1-ce86-4046-a830-886950283dc0</id>
       <masked>false</masked>
       <name>checkinOffset</name>
    </variable>
    <variable>
       <defaultValue>7</defaultValue>
       <description></description>
-      <id>8b507d82-5e65-46b6-8adf-a3d4723f5e54</id>
+      <id>663066c1-6805-49b6-9036-849e0e0c4aa1</id>
       <masked>false</masked>
       <name>stayPeriod</name>
    </variable>
    <variable>
       <defaultValue>'4'</defaultValue>
       <description></description>
-      <id>ed00708c-47cf-4e3c-8268-f7803862ebf4</id>
+      <id>6795a781-26a0-46e9-9304-887c31e0289a</id>
       <masked>false</masked>
       <name>adults</name>
    </variable>
    <variable>
       <defaultValue>'3'</defaultValue>
       <description></description>
-      <id>9cf0bff2-cda8-4995-a61b-7e4c095234f2</id>
+      <id>adde7c33-7fb4-4259-83a9-0ed34403ba0b</id>
       <masked>false</masked>
       <name>children</name>
    </variable>

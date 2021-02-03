@@ -24,43 +24,32 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
-
 WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'alex')
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
-
-Date checkin = CustomKeywords.'customPackage.ssb.getCheckinDate'()
-
+Date checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
 WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
-
-Date checkout = CustomKeywords.'customPackage.ssb.getCheckoutDate'()
-
+Date checkout = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
 WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests'))
-
-int guestsAmount = CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
-
-CustomKeywords.'customPackage.ssb.setChildrenAmount'(AddChild, guestsAmount)
+CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
-
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
 CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
 CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(),'alex')
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(),checkin.format('dd+MMM+yyyy'),checkout.format('dd+MMM+yyyy'))
-CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, AddChild)
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, children)
 
 WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'alex', 0)
-
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), checkin.format('d MMMM'))
-
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), checkout.format('d MMMM'))
-
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (GlobalVariable.SSB_AdultsMin + AddChild) + GlobalVariable.SSB_GuestsText)
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (GlobalVariable.SSB_AdultsMin + children) + GlobalVariable.SSB_GuestsText)
 
 WebUI.closeBrowser()
 

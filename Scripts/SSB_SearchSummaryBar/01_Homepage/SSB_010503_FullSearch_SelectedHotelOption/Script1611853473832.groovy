@@ -20,41 +20,31 @@ import java.util.Date as Date
 import java.util.Calendar as Calendar
 
 WebUI.openBrowser(GlobalVariable.baseURL)
-
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
-
 WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'ahl')
-
 WebUI.click(findTestObject('SearchSummaryBar/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
-
-def checkin = CustomKeywords.'customPackage.ssb.getCheckinDate'()
-
+def checkin =CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
 WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
-
-def checkout = CustomKeywords.'customPackage.ssb.getCheckoutDate'()
-
+def checkout = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
 WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests'))
-
-int guestsAmount = CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
-
-CustomKeywords.'customPackage.ssb.setChildrenAmount'(AddChild, guestsAmount)
+CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
-
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
 CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/hotels/dar-ahlam')
 //CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(),'Barcelona%2C+Spain','Barcelona','Spain','Barcelona')
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
-CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, AddChild)
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, children)
 
 WebUI.closeBrowser()
 

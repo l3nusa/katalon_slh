@@ -10,6 +10,6 @@
       <description></description>
       <id>452b1478-3dce-4715-a0ed-0c970877cde0</id>
       <masked>false</masked>
-      <name>AddChild</name>
+      <name>children</name>
    </variable>
 </TestCaseEntity>

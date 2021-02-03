@@ -42,7 +42,7 @@ if (divClass.contains('disabled')) {
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
 
-Date date = CustomKeywords.'customPackage.ssb.getCheckoutDate'()
+Date date = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
 
 WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
 

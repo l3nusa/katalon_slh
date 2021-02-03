@@ -50,22 +50,7 @@ WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'london')
 WebUI.click(findTestObject('SearchSummaryBar/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
-//checkin = new Date() + checkinOffset
-checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'() + checkinOffset
-WebUI.comment('checkin : ' + checkin)
-/*******
-import com.kms.katalon.core.testobject.ConditionType
-
-SimpleDateFormat sdf = new SimpleDateFormat('MMMM d, yyyy')
-def day = sdf.format(checkin).toString()
-WebUI.comment('Day : '+ day);
-String xpath = '//table[@role=\'presentation\']//td[contains(@aria-label,\'' + day + '\')]'
-WebUI.comment('xpath : '+ xpath);
-TestObject to = new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
-
-WebUI.click(to)
-
-*******/
+checkin = (CustomKeywords.'customPackage.ssb.getActiveCheckinDate'() + checkinOffset)
 WebUI.click(CustomKeywords.'getDatePickerObjectByDate'(checkin))
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkout'))

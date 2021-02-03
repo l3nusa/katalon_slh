@@ -63,9 +63,12 @@ WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
 currentUrl = WebUI.getUrl()
 
-if (!(currentUrl.endsWith('hotels/dar-ahlam?adults=1&children=2&startDate=' + checkin.format('yyyy-MM-dd') + '&endDate=' + checkout.format('yyyy-MM-dd')))) {
+if (!(currentUrl.endsWith((('hotels/dar-ahlam?adults=1&children=2&startDate=' + checkin.format('yyyy-MM-dd')) + '&endDate=') + 
+    checkout.format('yyyy-MM-dd')))) {
     throw new Exception('Current URL doesn\'t match the expected : ', currentUrl)
 }
 
 WebUI.closeBrowser()
+
+
 
