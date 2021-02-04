@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description>Summary bar on home page</description>
-   <name>SearchSummaryBar</name>
+   <name>SSB_Homepage</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -12,121 +12,139 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>26ef838c-77ab-4baf-88f6-c2f1ee6f315a</testSuiteGuid>
    <testCaseLink>
-      <guid>807edb0c-df06-413e-a1cf-e400c1c673fb</guid>
+      <guid>2c68751b-133c-4b47-a630-4029462e488b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010101_DefaultState</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>fd204d49-1b43-44e3-b230-b1842fff8656</guid>
+      <guid>bceb99a3-4062-478f-82d9-69838b068143</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010102_DefaultState_Search</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c2a3454b-505f-448f-91c2-95b24334f2e9</guid>
+      <guid>c485346f-a724-49a5-a8db-662e4e66628a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010201_Location_AutosuggestShown</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>44eddd02-9ff2-44f2-8612-3998aa7d7007</guid>
+      <guid>59ff499e-3670-42cb-8c21-f6b2a9140b46</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010202_Location_AutosuggestClickOption</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>83a7df1a-e9db-45c3-bc9e-ec1e44a301b1</guid>
+      <guid>83147bfe-25a3-4d3a-9ed1-b0f942f67899</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010203_Location_SearchWithManualEntry</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>51dfd482-abb9-45ea-9eda-832f623789b7</guid>
+      <guid>bc5dedd7-b32b-41a1-aa5b-5121ca164aa9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010204_Location_SearchWithSelectedHotelOption</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d181eee1-cdfc-48fa-8c81-b5a072fe737e</guid>
+      <guid>b6a86fc2-db76-499c-824e-99e767187a32</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010205_Location_SearchWithSelectedRegionOption</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>de3358f4-9566-40d7-80be-74da15f43ae7</guid>
+      <guid>1d506482-cde9-4301-8e47-0c24922b6b82</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010206_Location_NoSuggestions</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c796ff13-fcc0-4915-81c3-adbad3db41e8</guid>
+      <guid>c1ab70c7-0bbc-487d-aa73-4151093ea168</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010301_Datepicker_Checkin_SetingUp</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d3ad1891-3d05-4f56-8a82-8126a2b9cadb</guid>
+      <guid>4234f6be-a5d4-424e-a109-75a8c6cf8526</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010302_Datepicker_Checkin_Search</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>b54a4e23-a6a1-485c-afc0-d0534fb815a4</guid>
+      <guid>cd7445f8-ea28-4ac4-b075-289be3a0b8de</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010303_Datepicker_Checkout_SetingUp</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>f123c750-bdbe-4daa-856d-1a0104fdd963</guid>
+      <guid>270854ca-62a7-47bf-a746-f57ecc3cb3e9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010304_Datepicker_CheckinCheckout_Search</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>7fab9828-832e-4610-aed1-f6fe1299b150</guid>
+      <guid>bf40d864-f3f5-4f9d-95e1-551d211ddd70</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010305_Datepicker_PastDates_NotClickable</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>106a9c93-c316-431a-bc18-84baf12b1cd0</guid>
+      <guid>3ebc7da1-70da-440e-957d-da1d8a305094</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010306_Datepicker_Checkout_AfterCheckin</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>bfe9dda4-ec67-4e62-9794-2f7046d78b60</guid>
+      <guid>cfb99402-3e4e-4fb6-b769-d743f11baefb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010307_Datepicker_Checkin_Selected</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9082f3cf-f825-4a8d-a552-0f9493734892</guid>
+      <guid>53d397ce-ba8a-4851-86b2-f191a11c1834</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010308_Datepicker_Checkin_SelectedOnCheckoutDatepicker</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>671e7d3a-8c4c-4f83-a24d-a925fb911882</guid>
+      <guid>a8470f12-35d9-49bf-94a8-93631f303ab6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010309_Datepicker_Checkout_Selected</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5768b9f2-bb12-496b-923d-eae5796d04a7</guid>
+      <guid>a1bbe894-bb72-4035-8abf-3cd9abe62e86</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010310_Datepicker_SelectedPeriod</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>f57a3e0a-65ff-4559-bd84-d26b4bef2750</guid>
+      <guid>7ac6c8d7-4cf0-4f52-9a89-b7cbcfa32a77</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010311_Datepicker_CheckinCheckout_Reset</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>50537140-1141-484c-85a7-237357cbccbb</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>98f33dfd-0d66-48f4-bc54-e9134f207188</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>0ec77709-5e82-4d45-b7e6-93da657047d9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010401_Guests_Adults_Decr</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>684192d0-659a-4841-8830-e67cae500304</guid>
+      <guid>ec2941b3-07a9-4185-adee-10341efac7af</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010402_Guests_Adults_Incr</testCaseId>
@@ -138,37 +156,37 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>01d0f967-aab7-44da-a126-4bda267d7a46</guid>
+      <guid>76216a63-c52a-4f63-aa33-8a5818337ed3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010403_Guests_Adults_Min_Search</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c060da51-97da-45a3-9f5e-1900a49d8418</guid>
+      <guid>8518f75e-db7e-4b9c-ba0f-4f85321cc10b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010404_Guests_Adults_Max_Search</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9bcd4821-492f-4f64-8e64-31393b23b9c6</guid>
+      <guid>c54db503-4a0f-4cd6-8a30-8753431129af</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010405_Guests_Children_Incr</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>8152b70c-6912-4167-8306-54bf63581020</guid>
+      <guid>404f7966-98f3-4d08-b7bb-fae7a6f83647</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010406_Guests_Children_Decr</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>700f4da1-2db1-4529-9067-1e1479e6e32f</guid>
+      <guid>dabb362f-233e-4538-84f0-6d025076572b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010407_Guests_Children_Max_Search</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>e9b32222-bd9b-40a7-8b24-d68a1a0e999e</guid>
+      <guid>2a27719a-6df9-4485-aa81-57cdb1411f97</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010501_FullSearch_SelectedRegionOption</testCaseId>
@@ -180,7 +198,7 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>f1e495e4-ab1a-4260-aada-fb721792966c</guid>
+      <guid>367ee2e3-006b-4057-bad4-c9d3e68141f6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010502_FullSearch_ManualEntry</testCaseId>
@@ -192,7 +210,7 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>aeb6fd23-889e-49be-a8cb-0ee4de47fafd</guid>
+      <guid>1c25a83d-1ae9-4562-90e4-9b294c59dd5d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010503_FullSearch_SelectedHotelOption</testCaseId>

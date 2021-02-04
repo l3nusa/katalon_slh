@@ -50,30 +50,29 @@ WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'london')
 WebUI.click(findTestObject('SearchSummaryBar/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
-checkin = (CustomKeywords.'customPackage.ssb.getActiveCheckinDate'() + checkinOffset)
-WebUI.click(CustomKeywords.'getDatePickerObjectByDate'(checkin))
+checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'() + checkinOffset
+WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(checkin))
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
 checkout = (checkin + stayPeriod)
-WebUI.click(CustomKeywords.'getDatePickerObjectByDate'(checkout))
+WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(checkout))
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests'))
-CustomKeywords.'setAdultsAmount'(adults)
-CustomKeywords.'setChildrenAmount'(children)
+CustomKeywords.'customPackage.ssb.setAdultsAmount'(adults)
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
 CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 // verifyAppendedQuery(String currentUrl, String query="", String city=null, String country=null, String regions=null)
-CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'London%2C%20United%20Kingdom', 'London', 'United%20Kingdom', 
-    'London')
-CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('dd+MMM+yyyy'), checkout.format('dd+MMM+yyyy'))
+CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'London%2C%20United%20Kingdom', 'London', 'United%20Kingdom', 'London')
+CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), adults, children)
 
-WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'London%2C%20United%20Kingdom', 0)
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), checkin.format('dd MMMM'))
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), checkout.format('dd MMMM'))
+WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'London, United Kingdom', 0)
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), checkin.format('d MMMM'))
+WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), checkout.format('d MMMM'))
 WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (adults + children) + GlobalVariable.SSB_GuestsText)
 
 WebUI.closeBrowser()
