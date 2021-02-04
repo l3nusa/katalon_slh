@@ -50,39 +50,23 @@ WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'london')
 WebUI.click(findTestObject('SearchSummaryBar/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
-//checkin = new Date() + checkinOffset
 checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'() + checkinOffset
-WebUI.comment('checkin : ' + checkin)
-/*******
-import com.kms.katalon.core.testobject.ConditionType
-
-SimpleDateFormat sdf = new SimpleDateFormat('MMMM d, yyyy')
-def day = sdf.format(checkin).toString()
-WebUI.comment('Day : '+ day);
-String xpath = '//table[@role=\'presentation\']//td[contains(@aria-label,\'' + day + '\')]'
-WebUI.comment('xpath : '+ xpath);
-TestObject to = new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
-
-WebUI.click(to)
-
-*******/
-WebUI.click(CustomKeywords.'getDatePickerObjectByDate'(checkin))
+WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(checkin))
 
 WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
 checkout = (checkin + stayPeriod)
-WebUI.click(CustomKeywords.'getDatePickerObjectByDate'(checkout))
+WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(checkout))
 
 WebUI.click(findTestObject('SearchSummaryBar/Guests'))
-CustomKeywords.'setAdultsAmount'(adults)
-CustomKeywords.'setChildrenAmount'(children)
+CustomKeywords.'customPackage.ssb.setAdultsAmount'(adults)
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
 
 WebUI.click(findTestObject('SearchSummaryBar/Location'))
 WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
 
 CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 // verifyAppendedQuery(String currentUrl, String query="", String city=null, String country=null, String regions=null)
-CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'London%2C%20United%20Kingdom', 'London', 'United%20Kingdom', 
-    'London')
+CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'London%2C%20United%20Kingdom', 'London', 'United%20Kingdom', 'London')
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('dd+MMM+yyyy'), checkout.format('dd+MMM+yyyy'))
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), adults, children)
 

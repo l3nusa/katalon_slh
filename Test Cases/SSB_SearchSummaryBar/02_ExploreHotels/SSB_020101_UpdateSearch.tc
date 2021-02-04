@@ -20,14 +20,14 @@
       <name>stayPeriod</name>
    </variable>
    <variable>
-      <defaultValue>'4'</defaultValue>
+      <defaultValue>4</defaultValue>
       <description></description>
       <id>ed00708c-47cf-4e3c-8268-f7803862ebf4</id>
       <masked>false</masked>
       <name>adults</name>
    </variable>
    <variable>
-      <defaultValue>'3'</defaultValue>
+      <defaultValue>3</defaultValue>
       <description></description>
       <id>9cf0bff2-cda8-4995-a61b-7e4c095234f2</id>
       <masked>false</masked>

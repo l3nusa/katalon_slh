@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SSB_010311_Datepicker_CheckinCheckout_Reset</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>062a9caa-30bf-4d7f-a499-909c0cf820be</testCaseGuid>
+   <variable>
+      <defaultValue>3</defaultValue>
+      <description></description>
+      <id>50537140-1141-484c-85a7-237357cbccbb</id>
+      <masked>false</masked>
+      <name>checkinOffset</name>
+   </variable>
+   <variable>
+      <defaultValue>5</defaultValue>
+      <description></description>
+      <id>98f33dfd-0d66-48f4-bc54-e9134f207188</id>
+      <masked>false</masked>
+      <name>period</name>
+   </variable>
+</TestCaseEntity>

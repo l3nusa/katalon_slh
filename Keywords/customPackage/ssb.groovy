@@ -40,18 +40,15 @@ public class ssb {
 
 	@Keyword
 	def getActiveCheckinDate() {
-		String checkin = WebUI.getAttribute(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'), 'aria-label').replaceAll('Selected. ','')		
+		String checkin = WebUI.getAttribute(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'), 'aria-label').replaceAll('Selected. ','')
 		SimpleDateFormat sdf = new SimpleDateFormat('EEEE, MMMM dd, yyyy')
 		return sdf.parse(checkin);
 	}
 
 	@Keyword
-	def getDatePickerObjectByDate(Date date) {		
-		sleep(3000)
+	def getDatePickerObjectByDate(Date date) {
 		SimpleDateFormat sdf = new SimpleDateFormat('MMMM d, yyyy')
-		sleep(3000)
 		String xpath = '//table[@role=\'presentation\']//td[contains(@aria-label,\'' + sdf.format(date).toString() + '\')]'
-		sleep(3000)
 		return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
 	}
 
