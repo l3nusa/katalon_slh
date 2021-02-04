@@ -131,6 +131,32 @@ public class ssb {
 			throw new Exception('[checkin] or [checkout] value in current URL doesn\'t match the expected! ', currentUrl)
 		}
 	}
+	
+	@Keyword
+	def verifyAppendedBookingDates(String currentUrl, String checkin=null, String checkout=null){
+		String checkinStr = 'startDate='
+		String checkoutStr = 'endDate='
+		
+		if (checkin){
+			checkinStr = checkinStr + checkin
+		}
+		else
+		{
+			if(currentUrl.contains(checkinStr)) {
+				throw new Exception('[startDate] value is present in current URL although is shouldn\'t! ' + currentUrl)
+			}			
+		}
+		
+		if (checkout){
+			checkoutStr = checkoutStr + checkout
+		}
+		else
+		{
+			if(currentUrl.contains(checkoutStr)) {
+				throw new Exception('[endDate] value is present in current URL although is shouldn\'t! ' + currentUrl)
+			}
+		}
+	}
 
 	@Keyword
 	def verifyAppendedQuery(String currentUrl, String query="", String city=null, String country=null, String regions=null){
