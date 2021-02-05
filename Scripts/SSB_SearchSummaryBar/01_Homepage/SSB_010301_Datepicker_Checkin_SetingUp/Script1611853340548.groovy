@@ -24,13 +24,13 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 
 Date date = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
 
-WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), date.format('d MMMM'))
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), date.format('d MMMM'))
 
 WebUI.closeBrowser()
 

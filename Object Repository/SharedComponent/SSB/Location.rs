@@ -6,12 +6,12 @@
    <elementGuidId>fbcc0837-781e-4ae5-a9ac-af7dc1bc79e1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>input.ui-textinput__field</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[starts-with(@class,'apps-search-bar-form')]//div[contains(@class,'textinput')]//input</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>input.ui-textinput__field</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

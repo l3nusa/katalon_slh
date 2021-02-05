@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>NoMatchFound_Label</name>
+   <name>SearchTrigger_Icon</name>
    <tag></tag>
-   <elementGuidId>e0df9685-1b2e-476a-9bc3-4c0d3d77566f</elementGuidId>
+   <elementGuidId>e4925d19-05fe-4ead-ace0-496dbb42d71a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='apps-filter-results__content']//div[@class='apps-no-results']</value>
+         <value>//header//div[contains(@class,'sc-search-trigger--desktop')]/i</value>
       </entry>
       <entry>
          <key>BASIC</key>

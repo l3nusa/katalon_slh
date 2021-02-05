@@ -19,15 +19,15 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Location'))
+WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 
-WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'pe')
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'pe')
 
-WebUI.verifyElementNotPresent(findTestObject('SearchSummaryBar/AutosuggestOptions'), 0)
+WebUI.verifyElementNotPresent(findTestObject('SharedComponent/SSB/AutosuggestOptions'), 0)
 
-WebUI.setText(findTestObject('SearchSummaryBar/Location'), 't')
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 't')
 
-WebUI.verifyElementVisible(findTestObject('SearchSummaryBar/AutosuggestOptions'))
+WebUI.verifyElementVisible(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
 WebUI.closeBrowser()
 

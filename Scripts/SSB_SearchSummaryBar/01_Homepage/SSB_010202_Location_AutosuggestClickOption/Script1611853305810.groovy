@@ -19,17 +19,17 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Location'))
+WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 
-WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'petit')
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'petit')
 
-WebUI.verifyElementVisible(findTestObject('SearchSummaryBar/AutosuggestOptions'))
+WebUI.verifyElementVisible(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
-WebUI.click(findTestObject('SearchSummaryBar/AutosuggestOptions'))
+WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
-WebUI.verifyElementNotPresent(findTestObject('SearchSummaryBar/AutosuggestOptions'), 0)
+WebUI.verifyElementNotPresent(findTestObject('SharedComponent/SSB/AutosuggestOptions'), 0)
 
-WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'Petit St. Vincent Island, Saint Vincent and the Grenadines', 
+WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', 'Petit St. Vincent Island, Saint Vincent and the Grenadines', 
     0)
 
 WebUI.closeBrowser()

@@ -6,12 +6,12 @@
    <elementGuidId>e6c6fc32-7c10-47b4-bd39-6df644db24a6</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.ui-search-field__labelbottom > div</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[contains(@class,'apps-autosuggest')]//li</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.ui-search-field__labelbottom > div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

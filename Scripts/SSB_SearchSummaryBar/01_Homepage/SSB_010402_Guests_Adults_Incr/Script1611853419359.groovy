@@ -19,13 +19,13 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Guests'))
+WebUI.click(findTestObject('SharedComponent/SSB/Guests'))
 
 CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMax)
 
-WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Plus'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_Adults_Plus'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), GlobalVariable.SSB_AdultsMax + GlobalVariable.SSB_GuestsText)
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), GlobalVariable.SSB_AdultsMax + GlobalVariable.SSB_GuestsText)
 
 WebUI.closeBrowser()
 

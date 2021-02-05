@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Guests_Adults_Minus</name>
+   <name>Guests_AdultsAmount</name>
    <tag></tag>
-   <elementGuidId>3727220e-2089-40e2-b515-3c29b7e5c683</elementGuidId>
+   <elementGuidId>8c4efbd9-eaf7-4ec5-a70d-d23a405a63f3</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//div[starts-with(@class,'apps-search-bar-form')]//div[@class='ui-guests-popup-counter'])[1]</value>
+      </entry>
       <entry>
          <key>CSS</key>
          <value>div.Guests-count</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[starts-with(@class,'apps-search-bar-form')]//span[contains(text(),'dults')]/ancestor::div[@class='ui-guests-popup-row']//button[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

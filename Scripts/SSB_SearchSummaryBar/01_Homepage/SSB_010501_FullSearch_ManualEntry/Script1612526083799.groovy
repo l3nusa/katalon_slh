@@ -23,33 +23,33 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Location'))
-WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'alex')
+WebUI.click(findTestObject('SharedComponent/SSB/Location'))
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'alex')
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 Date checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
-WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 Date checkout = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
-WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
-WebUI.click(findTestObject('SearchSummaryBar/Guests'))
+WebUI.click(findTestObject('SharedComponent/SSB/Guests'))
 CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
 CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
 
-WebUI.click(findTestObject('SearchSummaryBar/Location'))
-WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
+WebUI.click(findTestObject('SharedComponent/SSB/Location'))
+WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
 CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
 CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(),'alex')
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(),checkin.format('dd+MMM+yyyy'),checkout.format('dd+MMM+yyyy'))
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, children)
 
-WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'alex', 0)
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), checkin.format('d MMMM'))
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), checkout.format('d MMMM'))
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (GlobalVariable.SSB_AdultsMin + children) + GlobalVariable.SSB_GuestsText)
+WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', 'alex', 0)
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), checkin.format('d MMMM'))
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), checkout.format('d MMMM'))
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), (GlobalVariable.SSB_AdultsMin + children) + GlobalVariable.SSB_GuestsText)
 
 WebUI.closeBrowser()
 

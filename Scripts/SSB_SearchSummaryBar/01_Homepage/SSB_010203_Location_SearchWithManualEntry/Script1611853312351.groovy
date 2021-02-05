@@ -19,24 +19,24 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Location'))
+WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 
-WebUI.setText(findTestObject('SearchSummaryBar/Location'), 'london')
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'london')
 
-WebUI.click(findTestObject('SearchSummaryBar/SearchBtn'))
+WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
 CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
 CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'london')
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), null, null)
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 
-WebUI.verifyElementAttributeValue(findTestObject('SearchSummaryBar/Location'), 'value', 'london', 0)
+WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', 'london', 0)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), GlobalVariable.SSB_Datepicker)
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), GlobalVariable.SSB_Datepicker)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), GlobalVariable.SSB_Datepicker)
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), GlobalVariable.SSB_Datepicker)
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_GuestsText)
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_GuestsText)
 
 WebUI.closeBrowser()
 

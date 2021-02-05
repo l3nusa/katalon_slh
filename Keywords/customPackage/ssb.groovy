@@ -32,7 +32,7 @@ public class ssb {
 	@Keyword
 	def getActiveCheckoutDate() {
 		//Choose Friday, January 22, 2021 as your check-in date. It’s available.
-		String checkout = WebUI.getAttribute(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'), 'aria-label')
+		String checkout = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'), 'aria-label')
 		checkout = checkout.substring(7, checkout.indexOf("as")-1);
 		SimpleDateFormat sdf = new SimpleDateFormat('EEEE, MMMM dd, yyyy')
 		return sdf.parse(checkout);
@@ -40,7 +40,7 @@ public class ssb {
 
 	@Keyword
 	def getActiveCheckinDate() {
-		String checkin = WebUI.getAttribute(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'), 'aria-label').replaceAll('Selected. ','')
+		String checkin = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'), 'aria-label').replaceAll('Selected. ','')
 		SimpleDateFormat sdf = new SimpleDateFormat('EEEE, MMMM dd, yyyy')
 		return sdf.parse(checkin);
 	}
@@ -54,24 +54,24 @@ public class ssb {
 
 	@Keyword
 	def setAdultsAmount(int expAdultsAmount){
-		int curAdultsAmount = Integer.parseInt(WebUI.getText(findTestObject('SearchSummaryBar/Guests_AdultsAmount')))
-		int curChildrenAmount = Integer.parseInt(WebUI.getText(findTestObject('SearchSummaryBar/Guests_ChildrenAmount')))
+		int curAdultsAmount = Integer.parseInt(WebUI.getText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_AdultsAmount')))
+		int curChildrenAmount = Integer.parseInt(WebUI.getText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_ChildrenAmount')))
 
 		int i = 0
 		if ((expAdultsAmount < curAdultsAmount) && (expAdultsAmount >= GlobalVariable.SSB_AdultsMin)) {
 			while (i < curAdultsAmount - expAdultsAmount) {
-				WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Minus'), FailureHandling.STOP_ON_FAILURE)
+				WebUI.click(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_Adults_Minus'), FailureHandling.STOP_ON_FAILURE)
 				i++
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount + curChildrenAmount - i) + GlobalVariable.SSB_GuestsText)
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_AdultsAmount'), (curAdultsAmount - i).toString())
+				WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), (curAdultsAmount + curChildrenAmount - i) + GlobalVariable.SSB_GuestsText)
+				WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_AdultsAmount'), (curAdultsAmount - i).toString())
 			}
 		}
 		else {
 			while (i < expAdultsAmount - curAdultsAmount) {
-				WebUI.click(findTestObject('SearchSummaryBar/Guests_Adults_Plus'), FailureHandling.STOP_ON_FAILURE)
+				WebUI.click(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_Adults_Plus'), FailureHandling.STOP_ON_FAILURE)
 				i++
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount + curChildrenAmount + i) + GlobalVariable.SSB_GuestsText)
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_AdultsAmount'), (curAdultsAmount + i).toString())
+				WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), (curAdultsAmount + curChildrenAmount + i) + GlobalVariable.SSB_GuestsText)
+				WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_AdultsAmount'), (curAdultsAmount + i).toString())
 			}
 		}
 
@@ -82,24 +82,24 @@ public class ssb {
 
 	@Keyword
 	def setChildrenAmount(int expChildrenAmount){
-		int curAdultsAmount = Integer.parseInt(WebUI.getText(findTestObject('SearchSummaryBar/Guests_AdultsAmount')))
-		int curChildrenAmount = Integer.parseInt(WebUI.getText(findTestObject('SearchSummaryBar/Guests_ChildrenAmount')))
+		int curAdultsAmount = Integer.parseInt(WebUI.getText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_AdultsAmount')))
+		int curChildrenAmount = Integer.parseInt(WebUI.getText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_ChildrenAmount')))
 
 		int i = 0
 		if ((expChildrenAmount < curChildrenAmount) && (expChildrenAmount >= GlobalVariable.SSB_ChildrenMin)){
 			while (i < curChildrenAmount - expChildrenAmount) {
-				WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Minus'), FailureHandling.STOP_ON_FAILURE)
+				WebUI.click(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_Children_Minus'), FailureHandling.STOP_ON_FAILURE)
 				i++
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount + curChildrenAmount - i) + GlobalVariable.SSB_GuestsText)
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_ChildrenAmount'), (curChildrenAmount - i).toString())
+				WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), (curAdultsAmount + curChildrenAmount - i) + GlobalVariable.SSB_GuestsText)
+				WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_ChildrenAmount'), (curChildrenAmount - i).toString())
 			}
 		}
 		else {
 			while (i < expChildrenAmount - curChildrenAmount) {
-				WebUI.click(findTestObject('SearchSummaryBar/Guests_Children_Plus'), FailureHandling.STOP_ON_FAILURE)
+				WebUI.click(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_Children_Plus'), FailureHandling.STOP_ON_FAILURE)
 				i++
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests'), (curAdultsAmount + curChildrenAmount + i) + GlobalVariable.SSB_GuestsText)
-				WebUI.verifyElementText(findTestObject('SearchSummaryBar/Guests_ChildrenAmount'), (curChildrenAmount + i).toString())
+				WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), (curAdultsAmount + curChildrenAmount + i) + GlobalVariable.SSB_GuestsText)
+				WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_ChildrenAmount'), (curChildrenAmount + i).toString())
 			}
 		}
 

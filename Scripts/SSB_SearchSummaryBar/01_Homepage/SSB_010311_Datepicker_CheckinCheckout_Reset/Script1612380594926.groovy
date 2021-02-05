@@ -23,41 +23,41 @@ import java.util.Calendar as Calendar
 WebUI.openBrowser(GlobalVariable.baseURL)
 WebUI.maximizeWindow()
 
-divClass = WebUI.getAttribute(findTestObject('SearchSummaryBar/Checkout_Div'), 'class')
+divClass = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Checkout_Div'), 'class')
 if (!(divClass.contains('disabled'))) {
     throw new Exception('Check out is enabled')
 }
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
-WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
-divClass = WebUI.getAttribute(findTestObject('SearchSummaryBar/Checkout_Div'), 'class')
+divClass = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Checkout_Div'), 'class')
 if (divClass.contains('disabled')) {
     throw new Exception('Check out is disabled')
 }
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 Date date = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
-WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
-WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
 //***
 WebUI.comment('********************** Dates are set ******************************')
 //***
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 date = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'() + checkinOffset
 WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(date))
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkin'), date.format('d MMMM'))
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), date.format('d MMMM'))
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), GlobalVariable.SSB_Datepicker)
-WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), GlobalVariable.SSB_Datepicker)
+WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 date = date + period
 WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(date))
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), date.format('d MMMM'))
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), date.format('d MMMM'))
 
 WebUI.closeBrowser()
 

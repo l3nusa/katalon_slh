@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Checkin</name>
+   <name>Checkout</name>
    <tag></tag>
-   <elementGuidId>34835d7d-ddb5-432c-a0e8-f5bced8456ce</elementGuidId>
+   <elementGuidId>4f89f9e2-33d7-4b80-90c2-f11098566a9d</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//div[starts-with(@class,'apps-search-bar-form')]//div[@class='apps-datepicker']//div[@class='ui-search-field__labelbottom'])[2]/div</value>
+      </entry>
       <entry>
          <key>CSS</key>
          <value>div.ui-search-field__labelbottom > div</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//div[starts-with(@class,'apps-search-bar-form')]//div[@class='apps-datepicker']//div[@class='ui-search-field__labelbottom'])[1]/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

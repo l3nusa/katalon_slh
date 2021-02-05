@@ -31,7 +31,7 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 
 WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(new Date() + 5))
 

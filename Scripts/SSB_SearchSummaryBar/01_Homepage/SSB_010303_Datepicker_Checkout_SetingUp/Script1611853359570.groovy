@@ -24,29 +24,29 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-divClass = WebUI.getAttribute(findTestObject('SearchSummaryBar/Checkout_Div'), 'class')
+divClass = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Checkout_Div'), 'class')
 
 if (!(divClass.contains('disabled'))) {
     throw new Exception('Check out is enabled')
 }
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 
-WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
-divClass = WebUI.getAttribute(findTestObject('SearchSummaryBar/Checkout_Div'), 'class')
+divClass = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Checkout_Div'), 'class')
 
 if (divClass.contains('disabled')) {
     throw new Exception('Check out is disabled')
 }
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 
 Date date = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
 
-WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
-WebUI.verifyElementText(findTestObject('SearchSummaryBar/Checkout'), date.format('d MMMM'))
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), date.format('d MMMM'))
 
 WebUI.closeBrowser()
 

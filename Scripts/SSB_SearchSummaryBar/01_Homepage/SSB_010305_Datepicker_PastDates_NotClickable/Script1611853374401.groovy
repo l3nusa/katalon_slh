@@ -31,7 +31,7 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 
 SimpleDateFormat sdf1 = new SimpleDateFormat('yyyyMMdd')
 def curDate= new Date()

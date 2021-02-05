@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>SSB_010501_FullSearch_SelectedRegionOption</name>
+   <name>SSB_030101_FullSearch_SelectedRegionOption</name>
    <tag>SSB</tag>
    <comment></comment>
-   <testCaseGuid>252b472c-e44d-4746-94db-995821e8324b</testCaseGuid>
+   <testCaseGuid>31d46d74-8444-4a8b-a0cd-bde5dcec3abb</testCaseGuid>
    <variable>
-      <defaultValue>2</defaultValue>
+      <defaultValue>1</defaultValue>
       <description></description>
-      <id>8948e2d3-af5a-4e67-a480-97c4f2e9eef6</id>
+      <id>0840ff73-0229-451e-b0a6-2a7cf719f0e1</id>
       <masked>false</masked>
       <name>children</name>
    </variable>

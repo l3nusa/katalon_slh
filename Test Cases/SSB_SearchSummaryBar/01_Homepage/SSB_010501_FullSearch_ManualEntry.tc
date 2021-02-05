@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SSB_010501_FullSearch_ManualEntry</name>
+   <tag>SSB</tag>
+   <comment></comment>
+   <testCaseGuid>252b472c-e44d-4746-94db-995821e8324b</testCaseGuid>
+   <variable>
+      <defaultValue>2</defaultValue>
+      <description></description>
+      <id>8948e2d3-af5a-4e67-a480-97c4f2e9eef6</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

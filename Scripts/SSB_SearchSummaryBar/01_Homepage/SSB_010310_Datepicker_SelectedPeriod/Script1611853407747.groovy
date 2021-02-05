@@ -31,13 +31,13 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 
 WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(new Date()))
 
 WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(new Date() + 3))
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 
 def date = (new Date() + 3) - 1
 

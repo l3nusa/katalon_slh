@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Datepicker_ActiveDate</name>
+   <name>Datepicker_FirstActiveDay</name>
    <tag></tag>
    <elementGuidId>c5e82529-e408-421d-bccc-354d99660d13</elementGuidId>
    <selectorCollection>

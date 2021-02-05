@@ -189,7 +189,7 @@
       <guid>2a27719a-6df9-4485-aa81-57cdb1411f97</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010501_FullSearch_SelectedRegionOption</testCaseId>
+      <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010501_FullSearch_ManualEntry</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -201,7 +201,7 @@
       <guid>367ee2e3-006b-4057-bad4-c9d3e68141f6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010502_FullSearch_ManualEntry</testCaseId>
+      <testCaseId>Test Cases/SSB_SearchSummaryBar/01_Homepage/SSB_010502_FullSearch_SelectedRegionOption</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>

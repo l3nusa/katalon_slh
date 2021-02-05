@@ -20,16 +20,23 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
-
 WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'ahl')
-
 WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
 CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/hotels/dar-ahlam')
-CustomKeywords.'customPackage.ssb.verifyAppendedBookingDates'(WebUI.getUrl(), null, null)
+CustomKeywords.'customPackage.ssb.verifyAppendedBookingDates'(WebUI.getUrl())
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
+
+//WebUI.waitForPageLoad(5)
+WebUI.click(findTestObject('SharedComponent/AcceptCookieBtn'))
+WebUI.click(findTestObject('PageSpecific/HotelPage/SecondaryNav/SelectDatesBtn'))
+
+WebUI.verifyElementNotVisible(findTestObject('SharedComponent/SSB/Location'), FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), GlobalVariable.SSB_Datepicker)
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), GlobalVariable.SSB_Datepicker)
+WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_ChildrenMin + GlobalVariable.SSB_GuestsText)
 
 WebUI.closeBrowser()
 

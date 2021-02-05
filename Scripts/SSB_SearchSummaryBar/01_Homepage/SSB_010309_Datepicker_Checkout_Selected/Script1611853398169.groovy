@@ -31,13 +31,13 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkin'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 
-WebUI.click(findTestObject('SearchSummaryBar/Datepicker_ActiveDate'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
 WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(new Date() + 3))
 
-WebUI.click(findTestObject('SearchSummaryBar/Checkout'))
+WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 
 def classSelected = WebUI.getAttribute(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(new Date() + 3), 'class')
 
