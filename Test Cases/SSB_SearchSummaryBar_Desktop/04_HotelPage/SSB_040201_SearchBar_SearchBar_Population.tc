@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SSB_040201_SearchBar_SearchBar_Population</name>
+   <tag>SSB</tag>
+   <comment></comment>
+   <testCaseGuid>703fe4a7-6476-499f-a6aa-88a27489f3a7</testCaseGuid>
+   <variable>
+      <defaultValue>2</defaultValue>
+      <description></description>
+      <id>fe490739-f2c6-4ff1-a511-2591e235fbe7</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

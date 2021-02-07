@@ -53,6 +53,13 @@ public class ssb {
 	}
 
 	@Keyword
+	def verifyDatePickerPriceByDate(Date date) {
+		SimpleDateFormat sdf = new SimpleDateFormat('MMMM d, yyyy')
+		String xpath = '//table[@role=\'presentation\']//td[contains(@aria-label,\'' + sdf.format(date).toString() + '\')]//div[@class=\'apps-datepicker__text\']'
+		return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
+	}
+	
+	@Keyword
 	def setAdultsAmount(int expAdultsAmount){
 		int curAdultsAmount = Integer.parseInt(WebUI.getText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_AdultsAmount')))
 		int curChildrenAmount = Integer.parseInt(WebUI.getText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_ChildrenAmount')))
@@ -131,27 +138,25 @@ public class ssb {
 			throw new Exception('[checkin] or [checkout] value in current URL doesn\'t match the expected! ', currentUrl)
 		}
 	}
-	
+
 	@Keyword
 	def verifyAppendedBookingDates(String currentUrl, String checkin=null, String checkout=null){
 		String checkinStr = 'startDate='
 		String checkoutStr = 'endDate='
-		
+
 		if (checkin){
 			checkinStr = checkinStr + checkin
 		}
-		else
-		{
+		else {
 			if(currentUrl.contains(checkinStr)) {
 				throw new Exception('[startDate] value is present in current URL although is shouldn\'t! ' + currentUrl)
-			}			
+			}
 		}
-		
+
 		if (checkout){
 			checkoutStr = checkoutStr + checkout
 		}
-		else
-		{
+		else {
 			if(currentUrl.contains(checkoutStr)) {
 				throw new Exception('[endDate] value is present in current URL although is shouldn\'t! ' + currentUrl)
 			}
