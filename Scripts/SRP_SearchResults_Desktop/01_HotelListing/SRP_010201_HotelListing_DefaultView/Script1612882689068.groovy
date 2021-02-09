@@ -19,38 +19,26 @@ import java.time.format.DateTimeFormatter as DateTimeFormatter
 import java.util.Date as Date
 import java.util.Calendar as Calendar
 
-
 WebUI.openBrowser(GlobalVariable.baseURL)
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
-WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'barce')
-WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'alex')
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 Date checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
 WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
-WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
-Date checkout = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
-
-WebUI.click(findTestObject('SharedComponent/SSB/Guests'))
-CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
-CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
-
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
-CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(),'Barcelona%2C+Spain','Barcelona','Spain','Barcelona')
-CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(),checkin.format('dd+MMM+yyyy'),checkout.format('dd+MMM+yyyy'))
-CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, children)
+CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
-WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', 'Barcelona, Spain', 0)
-WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), checkin.format('d MMMM'))
-WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), checkout.format('d MMMM'))
-WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), (GlobalVariable.SSB_AdultsMin + children) + GlobalVariable.SSB_GuestsText)
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/Filter'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/Sorting'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/MapToggle'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/HotelListing/ResultList_Item'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Results_Label'))
 
 WebUI.closeBrowser()
 

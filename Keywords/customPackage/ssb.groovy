@@ -58,7 +58,7 @@ public class ssb {
 		String xpath = '//table[@role=\'presentation\']//td[contains(@aria-label,\'' + sdf.format(date).toString() + '\')]//div[@class=\'apps-datepicker__text\']'
 		return new TestObject().addProperty('xpath', ConditionType.EQUALS, xpath)
 	}
-	
+
 	@Keyword
 	def setAdultsAmount(int expAdultsAmount){
 		int curAdultsAmount = Integer.parseInt(WebUI.getText(findTestObject('SharedComponent/SSB/Guests_dropdown/Guests_AdultsAmount')))
@@ -185,13 +185,6 @@ public class ssb {
 			if (!currentUrl.contains('regions=' + regions)) {
 				throw new Exception('[regions] value in current URL doesn\'t match the expected! ', currentUrl)
 			}
-		}
-	}
-
-	@Keyword
-	def verifyDestinationPageUrl(String currentUrl, String expUrl){
-		if (!currentUrl.contains(expUrl)) {
-			throw new Exception('Current page URL doesn\'t match to the expected one! ', currentUrl)
 		}
 	}
 }

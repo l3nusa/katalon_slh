@@ -33,4 +33,11 @@ public class CommonUtils {
 		WebUI.sendKeys(element, Keys.chord(Keys.CONTROL, "a"))
 		WebUI.sendKeys(element, Keys.chord(Keys.DELETE/*.BACK_SPACE*/))
 	}
+	
+	@Keyword
+	def verifyDestinationPageUrl(String currentUrl, String expUrl){
+		if (!currentUrl.contains(expUrl)) {
+			throw new Exception('Current page URL doesn\'t match to the expected one! ', currentUrl)
+		}
+	}
 }

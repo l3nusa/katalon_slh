@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SRP_010101_HotelListing_NoResultsFound</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>25dd41f0-1f78-4f34-b629-02b9cf253ca9</testCaseGuid>
+</TestCaseEntity>

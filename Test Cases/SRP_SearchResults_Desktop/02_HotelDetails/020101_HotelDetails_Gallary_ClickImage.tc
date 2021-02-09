@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>020101_HotelDetails_Gallary_ClickImage</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fd0ec412-8b95-450d-9384-26c1c682862a</testCaseGuid>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>ea44377d-c57f-40bf-af08-47bc9f76944b</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

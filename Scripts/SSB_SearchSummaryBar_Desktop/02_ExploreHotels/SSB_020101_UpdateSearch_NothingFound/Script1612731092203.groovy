@@ -51,5 +51,11 @@ WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
 WebUI.verifyElementText(findTestObject('PageSpecific/ExploreHotels/NoMatchFound_Label'), 'Sorry. No matches found.')
 
+CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
+// verifyAppendedQuery(String currentUrl, String query="", String city=null, String country=null, String regions=null)
+CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'alexlondon')
+CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, GlobalVariable.SSB_ChildrenMin)
+
 WebUI.closeBrowser()
 
