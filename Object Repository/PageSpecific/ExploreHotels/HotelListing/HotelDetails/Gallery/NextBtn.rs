@@ -4,6 +4,16 @@
    <name>NextBtn</name>
    <tag></tag>
    <elementGuidId>f916a3e8-af2f-4ad1-9ff8-fe696d4b7c71</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@class='apps-result-list__item']//div[@class='sc-image-gallery__legend']//div[@aria-label='Next']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>

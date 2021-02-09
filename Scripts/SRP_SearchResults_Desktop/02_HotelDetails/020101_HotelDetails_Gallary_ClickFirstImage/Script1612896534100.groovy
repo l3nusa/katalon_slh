@@ -47,12 +47,11 @@ CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl
 int wIndex1 = WebUI.getWindowIndex()
 WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/Image'))
 int wIndex2 = WebUI.getWindowIndex()
+assert wIndex1 == wIndex2
 
 CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/hotels/')
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, children)
 
-assert wIndex1 == wIndex2
-	
 WebUI.closeBrowser()
 

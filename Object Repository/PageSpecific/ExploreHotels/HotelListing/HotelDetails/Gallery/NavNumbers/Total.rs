@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Image</name>
+   <name>Total</name>
    <tag></tag>
-   <elementGuidId>d8dd7b6e-bdf5-4719-92ec-260c45b2e122</elementGuidId>
+   <elementGuidId>1a1033b8-1330-449f-837f-0e8022ba74e9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='apps-result-list__item']//li[contains(@class,'slide--active')]//img</value>
+         <value>//div[@class='apps-result-list__item']//div[contains(@class,'navigation-numbers')]/span/span[not(@class)]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>020101_HotelDetails_Gallary_ClickImage</name>
+   <name>020101_HotelDetails_Gallary_ClickFirstImage</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>fd0ec412-8b95-450d-9384-26c1c682862a</testCaseGuid>
