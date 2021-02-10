@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>PreviousBtn</name>
+   <name>MapBox</name>
    <tag></tag>
-   <elementGuidId>e2b59137-300c-49b5-b378-3473ca0252c9</elementGuidId>
+   <elementGuidId>d5d22cef-6a6e-4bb6-a096-c437460ce970</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='apps-result-list__item']//div[@class='sc-image-gallery__legend']//div[@aria-label='Previous']</value>
+         <value>//div[contains(@class,'apps-map-box--active')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>020203_HotelBox_CheckDescription---</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>642c5861-8d53-4585-a756-34d297f27323</testCaseGuid>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>c8d9500b-4599-4255-a63c-91b0a3fc35e7</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

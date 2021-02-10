@@ -14,31 +14,37 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import java.text.SimpleDateFormat as SimpleDateFormat
+import java.time.format.DateTimeFormatter as DateTimeFormatter
+import java.util.Date as Date
+import java.util.Calendar as Calendar
 
 WebUI.openBrowser(GlobalVariable.baseURL)
-
 WebUI.maximizeWindow()
 
-WebUI.click(findTestObject('SharedComponent/SSB/Guests'))
-
-CustomKeywords.'customPackage.ssb.setChildrenAmount'(GlobalVariable.SSB_ChildrenMax)
-
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'barce')
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
-CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl())
-CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl())
-CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMax)
+WebUI.comment('********************** Search page ******************************')
 
-WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), GlobalVariable.SSB_Datepicker)
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
-WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), GlobalVariable.SSB_Datepicker)
+int i = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Index')).toInteger()
+int total = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Total')).toInteger()
 
-WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), (GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_ChildrenMax) + GlobalVariable.SSB_GuestsText)
+assert total > 1
 
-WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', '', 0)
+while(i < (total % 10 + 1)) {
+	CustomKeywords.'customPackage.hotelDetails.getNextGalleryImage'()
+	i++
+}
+
+while(i > 1) {
+	CustomKeywords.'customPackage.hotelDetails.getPreviousGalleryImage'()
+	i--
+}
 
 WebUI.closeBrowser()
 

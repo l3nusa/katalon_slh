@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>PreviousBtn</name>
+   <name>Name</name>
    <tag></tag>
-   <elementGuidId>e2b59137-300c-49b5-b378-3473ca0252c9</elementGuidId>
+   <elementGuidId>a8e04094-12ee-40d6-828c-52d7d45117be</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='apps-result-list__item']//div[@class='sc-image-gallery__legend']//div[@aria-label='Previous']</value>
+         <value>//div[@class='apps-result-list__item']//div[contains(@class,'detail')]//h3</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

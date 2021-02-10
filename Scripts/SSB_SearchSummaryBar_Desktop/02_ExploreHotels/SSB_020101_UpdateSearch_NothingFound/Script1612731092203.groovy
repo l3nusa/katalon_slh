@@ -40,7 +40,7 @@ CustomKeywords.'customPackage.ssb.setChildrenAmount'(GlobalVariable.SSB_Children
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
 WebUI.comment('********************** Search page ******************************')
 
@@ -51,7 +51,7 @@ WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
 WebUI.verifyElementText(findTestObject('PageSpecific/ExploreHotels/NoMatchFound_Label'), 'Sorry. No matches found.')
 
-CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 // verifyAppendedQuery(String currentUrl, String query="", String city=null, String country=null, String regions=null)
 CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'alexlondon')
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))

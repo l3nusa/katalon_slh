@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>020103_HotelDetails_Gallary_ClickNextToUpdateCount</name>
+   <name>020101_HotelGallery_ClickNextPrevious_CheckImageCount</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>0538fa3d-aa0c-4fd0-983f-cb2bb147f03c</testCaseGuid>

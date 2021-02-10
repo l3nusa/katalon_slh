@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>020102_HotelDetails_Gallary_ClickAnyOtherImage</name>
+   <name>020104_HotelGallery_ClickPreviousOnFirstImage</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>937b2e2c-becd-4c6d-b13b-18b00b1544d4</testCaseGuid>
+   <testCaseGuid>bdc5db95-9981-4272-880f-b9b95a68ac1d</testCaseGuid>
    <variable>
       <defaultValue>1</defaultValue>
       <description></description>
-      <id>3b69f209-dd09-42c9-9f62-461e9dcc4d95</id>
+      <id>f295d60d-9e44-49a6-bc19-cc46f9e0d298</id>
       <masked>false</masked>
       <name>children</name>
    </variable>
    <variable>
       <defaultValue>3</defaultValue>
       <description></description>
-      <id>f4c9c273-1eb2-4561-94a5-d9ca2589fca4</id>
+      <id>76a5d62f-1272-43cb-994d-de5e891d5b01</id>
       <masked>false</masked>
       <name>imageNum</name>
    </variable>

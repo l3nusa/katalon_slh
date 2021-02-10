@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>020105_HotelGallery_ClickNextOnLastImage</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e4309048-8709-4ff4-a486-5e69f52da95d</testCaseGuid>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>832af891-4f1a-43eb-9551-3ae4b5c33844</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+   <variable>
+      <defaultValue>3</defaultValue>
+      <description></description>
+      <id>c20fefbd-96cd-46ba-883b-761124a1bf1d</id>
+      <masked>false</masked>
+      <name>imageNum</name>
+   </variable>
+</TestCaseEntity>

@@ -23,7 +23,7 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
-WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'barce')
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'fez')
 WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
@@ -38,23 +38,14 @@ WebUI.click(findTestObject('SharedComponent/SSB/Guests'))
 CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
 CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
 
-WebUI.click(findTestObject('SharedComponent/SSB/Location'))
+WebUI.click(findTestObject('SharedComponent/SSB/Location'))*/
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
 WebUI.comment('********************** Search page ******************************')
 
 CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 int wIndex1 = WebUI.getWindowIndex()
-
-int i = 1
-while(i < imageNum) {
-	WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NextBtn'))
-	i++
-}
-String altAttr = WebUI.getAttribute(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/Image'),'alt')
-WebUI.verifyMatch(altAttr,'.*' + imageNum + '$', true, FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/Image'))
+WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/HotelBox/Name'))
 int wIndex2 = WebUI.getWindowIndex()
 assert wIndex1 == wIndex2
 

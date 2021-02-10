@@ -24,24 +24,41 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'barce')
+WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
+WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
+Date checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+
+WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
+Date checkout = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+
+WebUI.click(findTestObject('SharedComponent/SSB/Guests'))
+CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
+CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
+
+WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
 WebUI.comment('********************** Search page ******************************')
 
 CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
+int wIndex1 = WebUI.getWindowIndex()
 
-int i = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Index')).toInteger()
-int total = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Total')).toInteger()
-
-assert total > 1
-
-while(i < (total % 10 + 1)) {
-	WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NextBtn'))
+int i = 1
+while(i < imageNum) {
+	CustomKeywords.'customPackage.hotelDetails.getNextGalleryImage'()
 	i++
-	
-	assert i == WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Index')).toInteger()
 }
+
+WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/Image'))
+int wIndex2 = WebUI.getWindowIndex()
+assert wIndex1 == wIndex2
+
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/hotels/')
+CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
+CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, children)
 
 WebUI.closeBrowser()
 
