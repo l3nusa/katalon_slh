@@ -16,28 +16,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser(GlobalVariable.baseURL)
-
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
-
 WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'petit')
-
 WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
 CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'Petit+St.+Vincent+Island%2C+Saint+Vincent+and+the+Grenadines','Petit+St.+Vincent+Island','Saint+Vincent+and+the+Grenadines')
-CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), null, null)
+CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl())
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 
 WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', 'Petit St. Vincent Island, Saint Vincent and the Grenadines', 0)
-
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), GlobalVariable.SSB_Datepicker)
-
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), GlobalVariable.SSB_Datepicker)
-
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_GuestsText)
 
 WebUI.closeBrowser()

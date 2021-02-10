@@ -21,13 +21,10 @@ import java.util.Date as Date
 import java.util.Calendar as Calendar
 
 WebUI.openBrowser(GlobalVariable.baseURL)
-
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
-
 Date date = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
-
 WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), date.format('d MMMM'))

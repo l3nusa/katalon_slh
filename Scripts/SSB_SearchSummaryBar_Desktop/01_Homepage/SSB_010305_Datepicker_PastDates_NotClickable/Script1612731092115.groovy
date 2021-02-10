@@ -28,7 +28,6 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.testobject.ConditionType
 
 WebUI.openBrowser(GlobalVariable.baseURL)
-
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
@@ -39,11 +38,8 @@ def date = sdf1.parse((new Date().format('yyyyMM')).toString()+'01')
 
 while (curDate >= date){
 	curDate--
-	attribute = WebUI.getAttribute(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(curDate),'aria-disabled')	
-		
-	if (attribute == false){
-		throw new Exception('Past date [' + curDate + '] is enabled : [aria-disabled : ' + attribute + '] !')
-	}
+	attribute = WebUI.getAttribute(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(curDate),'aria-disabled')			
+	assert attribute == 'true'	
 }
 
 WebUI.closeBrowser()

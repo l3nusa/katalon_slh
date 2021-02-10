@@ -16,18 +16,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser(GlobalVariable.baseURL)
-
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
-
 WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'ahl')
-
 WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/hotels/dar-ahlam')
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/hotels/dar-ahlam')
 CustomKeywords.'customPackage.ssb.verifyAppendedBookingDates'(WebUI.getUrl(), null, null)
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 

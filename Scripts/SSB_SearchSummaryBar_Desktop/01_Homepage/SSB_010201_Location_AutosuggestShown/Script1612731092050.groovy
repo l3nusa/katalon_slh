@@ -16,17 +16,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser(GlobalVariable.baseURL)
-
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
-
 WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'pe')
-
 WebUI.verifyElementNotPresent(findTestObject('SharedComponent/SSB/AutosuggestOptions'), 0)
 
 WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 't')
-
 WebUI.verifyElementVisible(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
 WebUI.closeBrowser()

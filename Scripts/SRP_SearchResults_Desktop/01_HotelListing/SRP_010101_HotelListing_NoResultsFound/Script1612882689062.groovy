@@ -35,7 +35,7 @@ WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 WebUI.verifyElementText(findTestObject('PageSpecific/ExploreHotels/NoMatchFound_Label'), 'Sorry. No matches found.')
 
 WebUI.closeBrowser()

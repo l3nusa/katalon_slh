@@ -33,7 +33,7 @@ WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
 String label = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/Results_Label'))
 WebUI.verifyMatch(label, '.*' + location1 + '$', true, FailureHandling.STOP_ON_FAILURE)

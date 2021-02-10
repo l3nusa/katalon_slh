@@ -32,7 +32,7 @@ WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
 WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/Filter'))
 WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/Sorting'))

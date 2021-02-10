@@ -21,32 +21,25 @@ import java.util.Date as Date
 import java.util.Calendar as Calendar
 
 WebUI.openBrowser(GlobalVariable.baseURL)
-
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
-
 Date checkinDate = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
-
 WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
 Date checkoutDate = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
-
 WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.ssb.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
+CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
 CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl())
 CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkinDate.format('dd+MMM+yyyy'), checkoutDate.format('dd+MMM+yyyy'))
 CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), checkinDate.format('d MMMM'))
-
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), checkoutDate.format('d MMMM'))
-
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Guests'), GlobalVariable.SSB_GuestsAmount + GlobalVariable.SSB_GuestsText)
-
 WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', '', 0)
 
 WebUI.closeBrowser()
