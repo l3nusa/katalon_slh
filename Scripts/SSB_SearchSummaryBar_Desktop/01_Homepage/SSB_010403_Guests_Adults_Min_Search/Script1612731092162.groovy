@@ -29,10 +29,10 @@ WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
-CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl())
-CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl())
-CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, GlobalVariable.SSB_ChildrenMin)
+CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedQuery'(WebUI.getUrl())
+CustomKeywords.'customPackage.commonUtils.verifyAppendedDates'(WebUI.getUrl(),'','')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, GlobalVariable.SSB_ChildrenMin)
 
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), GlobalVariable.SSB_Datepicker)
 

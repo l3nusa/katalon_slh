@@ -32,7 +32,7 @@ public class ssb {
 	@Keyword
 	def getActiveCheckoutDate() {
 		//Choose Friday, January 22, 2021 as your check-in date. It’s available.
-		String checkout = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'), 'aria-label')
+		String checkout = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'), 'aria-label')
 		checkout = checkout.substring(7, checkout.indexOf("as")-1);
 		SimpleDateFormat sdf = new SimpleDateFormat('EEEE, MMMM dd, yyyy')
 		return sdf.parse(checkout);
@@ -40,7 +40,7 @@ public class ssb {
 
 	@Keyword
 	def getActiveCheckinDate() {
-		String checkin = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'), 'aria-label').replaceAll('Selected. ','')
+		String checkin = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'), 'aria-label').replaceAll('Selected. ','')
 		SimpleDateFormat sdf = new SimpleDateFormat('EEEE, MMMM dd, yyyy')
 		return sdf.parse(checkin);
 	}
@@ -112,79 +112,6 @@ public class ssb {
 
 		if ((expChildrenAmount < GlobalVariable.SSB_ChildrenMin) || (expChildrenAmount > GlobalVariable.SSB_ChildrenMax)){
 			throw new Exception('Please check expected Children value!')
-		}
-	}
-
-	@Keyword
-	def verifyAppendedGuestsAmount(String currentUrl, int adults, int children){
-		if (!currentUrl.contains('adults=' + adults) || !currentUrl.contains('children=' + children)) {
-			throw new Exception('[Adults] or [Children] value in current URL doesn\'t match the expected! ', currentUrl)
-		}
-	}
-
-	@Keyword
-	def verifyAppendedDates(String currentUrl, String checkin=null, String checkout=null){
-		String checkinStr = 'startDate='
-		String checkoutStr = 'endDate='
-
-		if (checkin){
-			checkinStr = checkinStr + checkin
-		}
-		if (checkout){
-			checkoutStr = checkoutStr + checkout
-		}
-
-		if (!currentUrl.contains(checkinStr) || !currentUrl.contains(checkoutStr)) {
-			throw new Exception('[checkin] or [checkout] value in current URL doesn\'t match the expected! ', currentUrl)
-		}
-	}
-
-	@Keyword
-	def verifyAppendedBookingDates(String currentUrl, String checkin=null, String checkout=null){
-		String checkinStr = 'startDate='
-		String checkoutStr = 'endDate='
-
-		if (checkin){
-			checkinStr = checkinStr + checkin
-		}
-		else {
-			if(currentUrl.contains(checkinStr)) {
-				throw new Exception('[startDate] value is present in current URL although is shouldn\'t! ' + currentUrl)
-			}
-		}
-
-		if (checkout){
-			checkoutStr = checkoutStr + checkout
-		}
-		else {
-			if(currentUrl.contains(checkoutStr)) {
-				throw new Exception('[endDate] value is present in current URL although is shouldn\'t! ' + currentUrl)
-			}
-		}
-	}
-
-	@Keyword
-	def verifyAppendedQuery(String currentUrl, String query="", String city=null, String country=null, String regions=null){
-		if (!currentUrl.contains('query=' + query)) {
-			throw new Exception('[query] value in current URL doesn\'t match the expected! ', currentUrl)
-		}
-
-		if (city) {
-			if (!currentUrl.contains('city=' + city)) {
-				throw new Exception('[city] value in current URL doesn\'t match the expected! ', currentUrl)
-			}
-		}
-
-		if (country) {
-			if (!currentUrl.contains('country=' + country)) {
-				throw new Exception('[country] value in current URL doesn\'t match the expected! ', currentUrl)
-			}
-		}
-
-		if (regions) {
-			if (!currentUrl.contains('regions=' + regions)) {
-				throw new Exception('[regions] value in current URL doesn\'t match the expected! ', currentUrl)
-			}
 		}
 	}
 }

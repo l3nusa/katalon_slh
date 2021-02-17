@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>06_LearnMore---</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>927a4cd3-db04-4290-a1a6-3e9be847fbed</testCaseGuid>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>de3e86a1-3857-47f4-ac20-2c3744b44bf9</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

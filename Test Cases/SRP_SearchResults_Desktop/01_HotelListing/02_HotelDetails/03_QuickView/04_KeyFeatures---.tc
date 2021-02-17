@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>04_KeyFeatures---</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2efe5fe3-f50f-4fe7-9dd9-3206e9d9746e</testCaseGuid>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>ced87a04-a009-4a33-8079-642e8baf3d38</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

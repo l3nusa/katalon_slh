@@ -24,10 +24,10 @@ WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
-CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'Petit+St.+Vincent+Island%2C+Saint+Vincent+and+the+Grenadines','Petit+St.+Vincent+Island','Saint+Vincent+and+the+Grenadines')
-CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl())
-CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
+CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedQuery'(WebUI.getUrl(), 'Petit+St.+Vincent+Island%2C+Saint+Vincent+and+the+Grenadines','Petit+St.+Vincent+Island','Saint+Vincent+and+the+Grenadines')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedDates'(WebUI.getUrl(),'','')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 
 WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', 'Petit St. Vincent Island, Saint Vincent and the Grenadines', 0)
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), GlobalVariable.SSB_Datepicker)

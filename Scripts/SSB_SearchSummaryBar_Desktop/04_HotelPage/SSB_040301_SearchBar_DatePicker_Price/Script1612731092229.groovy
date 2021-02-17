@@ -24,9 +24,9 @@ WebUI.click(findTestObject('PageSpecific/HotelPage/SecondaryNav/SelectDatesBtn')
 WebUI.click(findTestObject('PageSpecific/HotelPage/SecondaryNav/SSB/Checkin'))
 WebUI.verifyElementNotPresent(CustomKeywords.'customPackage.ssb.verifyDatePickerPriceByDate'(CustomKeywords.'customPackage.ssb.getActiveCheckinDate'() - 1), 0)
 WebUI.verifyElementPresent(CustomKeywords.'customPackage.ssb.verifyDatePickerPriceByDate'(CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()), 0)
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 WebUI.verifyElementPresent(CustomKeywords.'customPackage.ssb.verifyDatePickerPriceByDate'(CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()), 0)
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 WebUI.closeBrowser()
 

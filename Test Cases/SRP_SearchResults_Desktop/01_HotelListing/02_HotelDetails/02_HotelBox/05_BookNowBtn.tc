@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>05_BookNowBtn</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>7baf5203-5aeb-46fc-84a0-6b844980ee73</testCaseGuid>
+   <variable>
+      <defaultValue>2</defaultValue>
+      <description></description>
+      <id>b5306733-0f3e-4a88-b87e-7c4eeeacd317</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

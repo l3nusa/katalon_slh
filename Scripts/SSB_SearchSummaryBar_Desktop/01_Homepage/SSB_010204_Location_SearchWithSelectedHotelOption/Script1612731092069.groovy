@@ -24,9 +24,9 @@ WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/hotels/dar-ahlam')
-CustomKeywords.'customPackage.ssb.verifyAppendedBookingDates'(WebUI.getUrl(), null, null)
-CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
+CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/hotels/dar-ahlam')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedDates'(WebUI.getUrl(), null, null)
+CustomKeywords.'customPackage.commonUtils.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, GlobalVariable.SSB_ChildrenMin)
 
 WebUI.closeBrowser()
 

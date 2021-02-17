@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>SRP_010201_HotelListing_DefaultView</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>5e9f5055-7bce-4c62-a4ec-a279a75217ea</testCaseGuid>
-</TestCaseEntity>

@@ -31,11 +31,11 @@ WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 Date checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 Date checkout = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/Guests'))
 CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
@@ -44,10 +44,10 @@ CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
-CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(),'Barcelona%2C+Spain','Barcelona','Spain','Barcelona')
-CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(),checkin.format('dd+MMM+yyyy'),checkout.format('dd+MMM+yyyy'))
-CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, children)
+CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(),'/explore-hotels')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedQuery'(WebUI.getUrl(),'Barcelona%2C+Spain','Barcelona','Spain','Barcelona')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedDates'(WebUI.getUrl(),checkin.format('dd+MMM+yyyy'),checkout.format('dd+MMM+yyyy'))
+CustomKeywords.'customPackage.commonUtils.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_AdultsMin, children)
 
 WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', 'Barcelona, Spain', 0)
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), checkin.format('d MMMM'))

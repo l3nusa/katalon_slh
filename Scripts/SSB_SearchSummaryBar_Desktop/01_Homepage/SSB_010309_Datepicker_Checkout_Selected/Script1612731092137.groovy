@@ -33,7 +33,7 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 WebUI.click(CustomKeywords.'customPackage.ssb.getDatePickerObjectByDate'(new Date() + 3))
 

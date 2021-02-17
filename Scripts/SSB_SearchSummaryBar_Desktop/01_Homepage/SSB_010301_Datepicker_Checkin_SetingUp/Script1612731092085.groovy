@@ -25,7 +25,7 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 Date date = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), date.format('d MMMM'))
 

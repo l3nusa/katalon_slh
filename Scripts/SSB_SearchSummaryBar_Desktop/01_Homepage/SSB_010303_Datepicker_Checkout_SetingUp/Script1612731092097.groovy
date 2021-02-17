@@ -27,14 +27,14 @@ divClass = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Checkout_Div')
 WebUI.verifyMatch(divClass,'.*disabled.*', true, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 divClass = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Checkout_Div'), 'class')
 WebUI.verifyMatch(divClass,'.*(?!disabled)..*', true, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 Date date = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkout'), date.format('d MMMM'))
 
 WebUI.closeBrowser()

@@ -27,11 +27,11 @@ WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'alex')
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 Date checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 Date checkout = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/Guests'))
 CustomKeywords.'customPackage.ssb.setAdultsAmount'(GlobalVariable.SSB_AdultsMin)
@@ -40,12 +40,12 @@ CustomKeywords.'customPackage.ssb.setChildrenAmount'(GlobalVariable.SSB_Children
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
+CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
 WebUI.comment('********************** Search page ******************************')
 
 WebUI.waitForElementClickable(findTestObject('SharedComponent/SSB/Location'), 10)
-CustomKeywords.'customPackage.CommonUtils.clearElementText'(findTestObject('SharedComponent/SSB/Location'))
+CustomKeywords.'customPackage.commonUtils.clearElementText'(findTestObject('SharedComponent/SSB/Location'))
 WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'london')
 WebUI.click(findTestObject('SharedComponent/SSB/AutosuggestOptions'))
 
@@ -64,11 +64,10 @@ CustomKeywords.'customPackage.ssb.setChildrenAmount'(children)
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-CustomKeywords.'customPackage.CommonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
-// verifyAppendedQuery(String currentUrl, String query="", String city=null, String country=null, String regions=null)
-CustomKeywords.'customPackage.ssb.verifyAppendedQuery'(WebUI.getUrl(), 'London%2C%20United%20Kingdom', 'London', 'United%20Kingdom', 'London')
-CustomKeywords.'customPackage.ssb.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
-CustomKeywords.'customPackage.ssb.verifyAppendedGuestsAmount'(WebUI.getUrl(), adults, children)
+CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedQuery'(WebUI.getUrl(), 'London%2C%20United%20Kingdom', 'London', 'United%20Kingdom', 'London')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
+CustomKeywords.'customPackage.commonUtils.verifyAppendedGuestsAmount'(WebUI.getUrl(), adults, children)
 
 WebUI.verifyElementAttributeValue(findTestObject('SharedComponent/SSB/Location'), 'value', 'London, United Kingdom', 0)
 WebUI.verifyElementText(findTestObject('SharedComponent/SSB/Checkin'), checkin.format('d MMMM'))

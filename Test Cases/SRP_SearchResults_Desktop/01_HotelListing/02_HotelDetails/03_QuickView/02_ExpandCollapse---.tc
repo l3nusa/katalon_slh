@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>02_ExpandCollapse---</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ec45d6dd-d37a-4b52-9f93-5a79badd171c</testCaseGuid>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>75e88faa-4b03-4d0d-8ef4-773bdc6f4cc2</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

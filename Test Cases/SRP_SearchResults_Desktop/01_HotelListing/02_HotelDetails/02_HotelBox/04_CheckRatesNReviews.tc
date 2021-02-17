@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>04_CheckRatesNReviews</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>79ccd3c8-2967-4046-a5e4-fab440e09359</testCaseGuid>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>20f2e2c0-8dbe-4a81-a6e9-d3b0f8eeda33</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

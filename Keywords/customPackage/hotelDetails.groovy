@@ -23,35 +23,37 @@ import internal.GlobalVariable
 public class hotelDetails {
 	@Keyword
 	def getNextGalleryImage() {
-		int i = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Index')).toInteger()		
+		int i = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/NavNumbers/Index')).toInteger()
 
-		if (i == WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Total')).toInteger()) 
+		if (i == WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/NavNumbers/Total')).toInteger())
 			i = 1
 		else
 			i++
-				
-		WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NextBtn'))
-		assert i == WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Index')).toInteger()
-		
-		String altAttr = WebUI.getAttribute(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/Image'),'alt')
+
+		WebUI.scrollToElement(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/NextBtn'),0)
+		WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/NextBtn'))
+		assert i == WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/NavNumbers/Index')).toInteger()
+
+		String altAttr = WebUI.getAttribute(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/Image'),'alt')
 		WebUI.comment('[i] : '+i)
-		WebUI.comment('[index] : '+WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Index')).toInteger())
+		WebUI.comment('[index] : '+WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/NavNumbers/Index')).toInteger())
 		WebUI.comment('[alt] : '+altAttr)
 		WebUI.verifyMatch(altAttr,'.*' + i + '$', true, FailureHandling.STOP_ON_FAILURE)
 	}
 
 	@Keyword
 	def getPreviousGalleryImage() {
-		int i = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Index')).toInteger()		
-		
-		if (i == 1) 			
-			i = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Total')).toInteger()		 
-		else 
-			i--			
-		
-		WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/PreviousBtn'))
-		assert i == WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/NavNumbers/Index')).toInteger()
-		String altAttr = WebUI.getAttribute(findTestObject('PageSpecific/ExploreHotels/HotelListing/HotelDetails/Gallery/Image'),'alt')
+		int i = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/NavNumbers/Index')).toInteger()
+
+		if (i == 1)
+			i = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/NavNumbers/Total')).toInteger()
+		else
+			i--
+
+		WebUI.scrollToElement(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/PreviousBtn'),0)
+		WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/PreviousBtn'))
+		assert i == WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/NavNumbers/Index')).toInteger()
+		String altAttr = WebUI.getAttribute(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/Image'),'alt')
 		WebUI.verifyMatch(altAttr,'.*' + i + '$', true, FailureHandling.STOP_ON_FAILURE)
 	}
 }

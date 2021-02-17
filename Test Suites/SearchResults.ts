@@ -12,22 +12,22 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>a283a514-db9d-446b-a613-fc91f51d348c</testSuiteGuid>
    <testCaseLink>
-      <guid>6f9ab5f8-1e4f-42e7-9e7f-049605a93c41</guid>
+      <guid>b4fa6d1f-4f67-406e-bdf4-50df08534e89</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/SRP_010101_HotelListing_NoResultsFound</testCaseId>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/01_General/01_NoResultsFound</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4c503874-38e2-4586-8fd1-b229c08a5065</guid>
+      <guid>8b3fda19-f574-4d66-be2c-a060e7ad39f6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/SRP_010201_HotelListing_DefaultView</testCaseId>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/01_General/02_DefaultView</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>0f40e3d9-b1f3-44b3-81a8-387f41563f79</guid>
+      <guid>16547552-38d5-4880-8f0e-ee4ce2849ad4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/SRP_010202_HotelListing_UpdateCriteria</testCaseId>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/01_General/03_UpdateCriteria</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -42,10 +42,16 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>01778a72-3bc5-4fd5-a8b2-43f8c24c4c6a</guid>
+      <guid>34676b77-6467-4ab4-96a6-c422536723a9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SRP_SearchResults_Desktop/02_HotelDetails/020102_HotelGallery_ClickFirstImage</testCaseId>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/01_HotelGallery/01_ClickNextPrevious_CheckImageCount</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>49516333-0af1-4b8e-8ae8-2ba4e1bc7f34</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/01_HotelGallery/02_ClickFirstImage_CheckAppendedParameters</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -54,10 +60,10 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>e6631d4a-fc65-4508-850d-af7028baa2aa</guid>
+      <guid>51c73c69-3221-4832-9b9b-4c37f01c08a8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SRP_SearchResults_Desktop/02_HotelDetails/020103_HotelGallery_ClickAnyOtherImage</testCaseId>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/01_HotelGallery/03_ClickAnImage_CheckAppendedParameters</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -72,9 +78,105 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>2b78601d-8d10-48ca-86e3-551dc395b094</guid>
+      <guid>cace1b2e-f5ad-44ac-8589-d5a8f09801e5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SRP_SearchResults_Desktop/02_HotelDetails/020101_HotelGallery_ClickNextPrevious_CheckImageCount</testCaseId>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/01_HotelGallery/04_ClickPreviousOnFirstImage</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>f295d60d-9e44-49a6-bc19-cc46f9e0d298</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>76a5d62f-1272-43cb-994d-de5e891d5b01</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>831213f4-59eb-4d03-b508-ab098845ac74</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/01_HotelGallery/05_ClickNextOnLastImage</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>832af891-4f1a-43eb-9551-3ae4b5c33844</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c20fefbd-96cd-46ba-883b-761124a1bf1d</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>73dea541-b9bc-4851-a2b4-d19d51d4e2a0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/01_HotelGallery/06_ClickMagnifierToOpenOverlay---</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>fc8ca7cd-0903-4b25-aedd-17a24f281a84</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>9d76ceae-30b5-4503-882e-99ad85d4c1c5</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a2be64fe-89dd-4a80-9359-7bfb6c45a5ba</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/02_HotelBox/04_CheckRatesNReviews</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>20f2e2c0-8dbe-4a81-a6e9-d3b0f8eeda33</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7a0e0b26-deee-40dc-b167-f61b04d84506</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/02_HotelBox/03_CheckDescription</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c8d9500b-4599-4255-a63c-91b0a3fc35e7</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c18f2ed9-8d16-4d21-8a83-832e1ca18bb7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/02_HotelBox/02_ClickDestination</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>62f177aa-010f-465e-b04a-171f902e3411</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7ae2a95f-a7dc-4878-8091-e3882e760d07</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SRP_SearchResults_Desktop/01_HotelListing/02_HotelDetails/02_HotelBox/01_ClickHotelName</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>fadc986b-88eb-48ce-9138-7de037ba2b4a</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

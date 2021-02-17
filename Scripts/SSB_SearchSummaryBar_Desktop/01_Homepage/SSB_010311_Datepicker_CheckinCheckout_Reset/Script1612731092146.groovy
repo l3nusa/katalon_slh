@@ -29,7 +29,7 @@ if (!(divClass.contains('disabled'))) {
 }
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 divClass = WebUI.getAttribute(findTestObject('SharedComponent/SSB/Checkout_Div'), 'class')
 if (divClass.contains('disabled')) {
@@ -38,11 +38,11 @@ if (divClass.contains('disabled')) {
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkout'))
 Date date = CustomKeywords.'customPackage.ssb.getActiveCheckoutDate'()
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
-WebUI.click(findTestObject('SharedComponent/SSB/Datepicker_FirstActiveDay'))
+WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
 
 //***
 WebUI.comment('********************** Dates are set ******************************')

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>05_Map---</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>38b9aa16-b301-4cb2-8d58-bae706a2bd41</testCaseGuid>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>f571742c-a69e-40a6-9367-1648b73ce3c4</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+</TestCaseEntity>

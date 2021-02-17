@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>03_UpdateCriteria</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3a6e9e4c-9380-4f97-b7c6-42f2f514abec</testCaseGuid>
+   <variable>
+      <defaultValue>'lon'</defaultValue>
+      <description></description>
+      <id>a1a01ff1-ccdd-48e5-8dea-55fa6a085347</id>
+      <masked>false</masked>
+      <name>location1</name>
+   </variable>
+   <variable>
+      <defaultValue>'don'</defaultValue>
+      <description></description>
+      <id>30e3c33b-d362-40ba-86c1-887d2daa96e7</id>
+      <masked>false</masked>
+      <name>location2</name>
+   </variable>
+</TestCaseEntity>

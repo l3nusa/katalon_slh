@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>07_ChangeDatesBtn---</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d155faf7-8d06-451f-8578-37b6c1d3cdf7</testCaseGuid>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>bad79aaa-003a-4517-ad36-4f2a24517815</id>
+      <masked>false</masked>
+      <name>children</name>
+   </variable>
+   <variable>
+      <defaultValue>4</defaultValue>
+      <description>in months</description>
+      <id>35dfc190-7b00-453c-9f5e-23615cdcf988</id>
+      <masked>false</masked>
+      <name>stayingPeriod</name>
+   </variable>
+</TestCaseEntity>

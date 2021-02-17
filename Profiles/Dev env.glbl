@@ -6,8 +6,13 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'dev.slh.com'</initValue>
+      <initValue>'https://dev.slh.com'</initValue>
       <name>baseURL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'*************************'</initValue>
+      <name>s</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -18,5 +23,15 @@
       <description></description>
       <initValue>' Guests+'</initValue>
       <name>SSB_GuestsText</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'*************************'</initValue>
+      <name>ss</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'reservation.slh.com'</initValue>
+      <name>synxisUrl</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
