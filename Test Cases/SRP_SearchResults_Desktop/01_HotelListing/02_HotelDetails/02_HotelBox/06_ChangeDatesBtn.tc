@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>07_ChangeDatesBtn---</name>
+   <name>06_ChangeDatesBtn</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>d155faf7-8d06-451f-8578-37b6c1d3cdf7</testCaseGuid>

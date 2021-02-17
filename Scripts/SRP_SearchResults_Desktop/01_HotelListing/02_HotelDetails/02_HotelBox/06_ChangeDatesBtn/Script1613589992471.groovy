@@ -22,9 +22,11 @@ import groovy.time.TimeCategory
 
 WebUI.openBrowser(GlobalVariable.baseURL)
 WebUI.maximizeWindow()
+WebUI.click(findTestObject('SharedComponent/AcceptCookieBtn'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'monaco')
+sleep(150)
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 Date checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
@@ -52,7 +54,16 @@ WebUI.comment('********************** Search page ******************************
 
 CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
-WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/HotelListing/MapView/MapBox'))
+String currency = WebUI.getText(findTestObject('SharedComponent/Header/Currency_Selected'))
+
+int wIndex1 = WebUI.getWindowIndex()
+WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/CTAs/ChangeDatesBtn'))
+int wIndex2 = WebUI.getWindowIndex()
+assert wIndex1 == wIndex2
+
+CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/hotels/')
+CustomKeywords.'customPackage.commonUtils.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
+CustomKeywords.'customPackage.commonUtils.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, children)
+WebUI.verifyElementVisible(findTestObject('SharedComponent/SSB/Datepicker/RightBtn'), FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
-

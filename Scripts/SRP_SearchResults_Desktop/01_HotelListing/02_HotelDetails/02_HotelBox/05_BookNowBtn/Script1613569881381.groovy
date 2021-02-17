@@ -24,8 +24,8 @@ WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
 WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'italy')
+sleep(150)
 
-sleep(100)
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 Date checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()
 WebUI.click(findTestObject('SharedComponent/SSB/Datepicker/FirstActiveDay'))
@@ -48,13 +48,13 @@ CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl
 String currency = WebUI.getText(findTestObject('SharedComponent/Header/Currency_Selected'))
 
 int wIndex1 = WebUI.getWindowIndex()
-WebUI.verifyElementText(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/PrimaryBtn'),'Book Now.*')
-WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/PrimaryBtn'))
+WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/CTAs/BookNowBtn'))
 int wIndex2 = WebUI.getWindowIndex()
 assert wIndex1 == wIndex2
 
 CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), GlobalVariable.synxisUrl)
-CustomKeywords.'customPackage.commonUtils.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format('yyyy-MM-dd'))
+CustomKeywords.'customPackage.commonUtils.verifyAppendedDates'(WebUI.getUrl(), checkin.format('yyyy-MM-dd'), checkout.format(
+        'yyyy-MM-dd'))
 CustomKeywords.'customPackage.commonUtils.verifyAppendedGuestsAmount'(WebUI.getUrl(), GlobalVariable.SSB_GuestsAmount, children)
 CustomKeywords.'customPackage.commonUtils.verifyAppendedCurrency'(WebUI.getUrl(), currency)
 

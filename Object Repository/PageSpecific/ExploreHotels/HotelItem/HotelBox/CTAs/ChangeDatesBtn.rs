@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>PrimaryBtn</name>
+   <name>ChangeDatesBtn</name>
    <tag></tag>
-   <elementGuidId>74b2a842-1ad6-4e1d-8062-fe659aa75aef</elementGuidId>
+   <elementGuidId>41accd67-c22e-43e2-a700-37e0dab2d490</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>(//div[@class='apps-result-list']//div[contains(@class,'_item')])[1]//button[contains(@class,'primary')]</value>
-      </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@class='apps-result-list']//div[contains(@class,'_item')]//button[contains(@class,'primary')]//span[text()='Change Dates']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
