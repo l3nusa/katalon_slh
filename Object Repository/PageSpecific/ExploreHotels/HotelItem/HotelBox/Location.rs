@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Destination</name>
+   <name>Location</name>
    <tag></tag>
    <elementGuidId>6a66cb80-3821-4bfe-8923-3ef4a72eeb95</elementGuidId>
    <selectorCollection>

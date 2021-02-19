@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>02_SortingByLocation</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d0e7fc20-68e5-47ab-bf16-14fd5f6da61f</testCaseGuid>
+   <variable>
+      <defaultValue>'Aleenta Resort &amp; Spa Hua Hin'</defaultValue>
+      <description></description>
+      <id>5dbfa68b-9c20-4648-a560-9f3fd9ba39f9</id>
+      <masked>false</masked>
+      <name>expName</name>
+   </variable>
+</TestCaseEntity>

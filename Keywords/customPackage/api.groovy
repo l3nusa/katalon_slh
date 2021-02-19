@@ -18,26 +18,24 @@ import internal.GlobalVariable
 
 public class api {
 
-	
+
 	@Keyword
 	def getUnavailabledDate(Date startDate, int adultsCount, int childrenCount, int hotelCode=78358, String currencyCode='USD' ) {
 		SimpleDateFormat sdf = new SimpleDateFormat('yyyy-MM-dd')
-		
+
 		def response = WS.sendRequestAndVerify(findTestObject('APIs/gethotelcalendaravailability', [('startDate') : sdf.format(startDate).toString(), ('adultsCount') : adultsCount,
 			('childrenCount') : childrenCount, ('hotelCode') : hotelCode, ('currencyCode') : currencyCode]))
 
-		
-		
 		def dailyAvailabilities = jsonResponse.DailyAvailabilities
 		String unavailableDate = ''
-		
-		for(def day : dailyAvailabilities) {			
+
+		for(def day : dailyAvailabilities) {
 			if( day.AvailabilityStatus == 'Closed') {
 				unavailableDate = day.Date
 				break
 			}
 		}
-		
+
 		return unavailableDate
 	}
 }

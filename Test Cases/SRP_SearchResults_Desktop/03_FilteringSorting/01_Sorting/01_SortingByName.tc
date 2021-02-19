@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>01_SortingByName</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>84ae3830-b7c6-4181-a5c5-f8a1490cf7f3</testCaseGuid>
+   <variable>
+      <defaultValue>'Cabarita Beach, Australia'</defaultValue>
+      <description></description>
+      <id>dbd055de-1b85-44bc-b4be-559d9c351018</id>
+      <masked>false</masked>
+      <name>expLocation</name>
+   </variable>
+</TestCaseEntity>

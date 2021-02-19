@@ -31,7 +31,7 @@ WebUI.comment('********************** Search page ******************************
 
 CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
-WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/Destination'))
+WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/Location'))
 
 CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/HotelListing/MapView/MapBox'))

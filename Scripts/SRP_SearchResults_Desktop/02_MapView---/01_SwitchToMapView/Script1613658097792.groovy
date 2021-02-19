@@ -9,15 +9,13 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import java.text.SimpleDateFormat as SimpleDateFormat
-import java.time.format.DateTimeFormatter as DateTimeFormatter
-import java.util.Date as Date
-import java.util.Calendar as Calendar
+import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser(GlobalVariable.baseURL)
 WebUI.maximizeWindow()
@@ -31,10 +29,14 @@ WebUI.comment('********************** Search page ******************************
 
 CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
-WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/Destination'))
+WebUI.click(findTestObject('PageSpecific/ExploreHotels/Header/MapToggle'))
 
-CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
-WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/HotelListing/MapView/MapBox'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/Filter'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/Sorting'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/MapToggle'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Results_Label'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/MapView/MapBox'))
+
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelItem'))
 
 WebUI.closeBrowser()
-

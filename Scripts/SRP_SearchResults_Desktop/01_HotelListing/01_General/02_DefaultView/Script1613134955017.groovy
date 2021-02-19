@@ -37,8 +37,7 @@ CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl
 WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/Filter'))
 WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/Sorting'))
 WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Header/MapToggle'))
-WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/HotelItem/Gallery/Image'))
+WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelItem'))
 WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/Results_Label'))
 
 WebUI.closeBrowser()
-

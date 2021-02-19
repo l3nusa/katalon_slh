@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>04_DefaultSorting_HotelListing---</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>30412582-6d27-42fd-911b-6f57edb4cc3a</testCaseGuid>
+   <variable>
+      <defaultValue>'.*Hotel Name A-Z.*'</defaultValue>
+      <description></description>
+      <id>be36ffa9-6b05-428b-b5c5-48c8da044bca</id>
+      <masked>false</masked>
+      <name>expSorting</name>
+   </variable>
+</TestCaseEntity>

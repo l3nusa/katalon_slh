@@ -23,18 +23,17 @@ WebUI.openBrowser(GlobalVariable.baseURL)
 WebUI.maximizeWindow()
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
-WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'fez')
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'ale')
 
 WebUI.click(findTestObject('SharedComponent/SSB/SearchBtn'))
 
-WebUI.comment('********************** Search page ******************************')
-
 CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
 
-WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/Destination'))
+WebUI.click(findTestObject('PageSpecific/ExploreHotels/Header/Sorting'))
+WebUI.click(findTestObject('PageSpecific/ExploreHotels/Header/SortingOptions/ByLocation'))
 
-CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl(), '/explore-hotels')
-WebUI.verifyElementVisible(findTestObject('PageSpecific/ExploreHotels/HotelListing/MapView/MapBox'))
+sleep(100)
+String location = WebUI.getText(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/Location'))
+WebUI.verifyMatch(location, expLocation, true, FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
-

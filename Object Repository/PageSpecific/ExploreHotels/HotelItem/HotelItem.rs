@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Sorting</name>
+   <name>HotelItem</name>
    <tag></tag>
-   <elementGuidId>c32ab5fb-09cd-4459-867f-827940381b07</elementGuidId>
+   <elementGuidId>fe779fb4-8c3d-4bd4-b278-ea3072d5ab53</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[contains(@class,'results__sort')]</value>
+         <value>//div[@class='apps-result-list__item']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
