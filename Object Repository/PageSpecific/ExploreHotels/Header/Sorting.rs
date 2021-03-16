@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[contains(@class,'results__sort')]</value>
+         <value>//div[@class='apps-filter-bar']//div[contains(@class,'descktop')]//select</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

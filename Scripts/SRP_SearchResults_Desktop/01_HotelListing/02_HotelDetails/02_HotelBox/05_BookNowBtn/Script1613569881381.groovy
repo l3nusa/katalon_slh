@@ -21,10 +21,11 @@ import java.util.Calendar as Calendar
 
 WebUI.openBrowser(GlobalVariable.baseURL)
 WebUI.maximizeWindow()
+WebUI.click(findTestObject('SharedComponent/AcceptCookieBtn'))
 
 WebUI.click(findTestObject('SharedComponent/SSB/Location'))
-WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'italy')
-sleep(150)
+WebUI.setText(findTestObject('SharedComponent/SSB/Location'), 'rome')
+sleep(200)
 
 WebUI.click(findTestObject('SharedComponent/SSB/Checkin'))
 Date checkin = CustomKeywords.'customPackage.ssb.getActiveCheckinDate'()

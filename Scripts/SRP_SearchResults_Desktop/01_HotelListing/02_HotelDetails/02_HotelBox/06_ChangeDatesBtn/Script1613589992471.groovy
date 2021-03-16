@@ -57,6 +57,8 @@ CustomKeywords.'customPackage.commonUtils.verifyDestinationPageUrl'(WebUI.getUrl
 String currency = WebUI.getText(findTestObject('SharedComponent/Header/Currency_Selected'))
 
 int wIndex1 = WebUI.getWindowIndex()
+
+WebUI.scrollToElement(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/CTAs/ChangeDatesBtn'), 3)
 WebUI.click(findTestObject('PageSpecific/ExploreHotels/HotelItem/HotelBox/CTAs/ChangeDatesBtn'))
 int wIndex2 = WebUI.getWindowIndex()
 assert wIndex1 == wIndex2

@@ -4,6 +4,16 @@
    <name>MagnifierGlass</name>
    <tag></tag>
    <elementGuidId>304532e7-d00f-42ef-a76c-3aa4a73dad46</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@class='sc-image-gallery__legend']//div[contains(@class,'search')]/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>
